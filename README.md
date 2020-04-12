@@ -1,7 +1,11 @@
 # IDCC20
 
-## Euler input and output files
+## Conference Poster
+-[Link to poster] (https://github.com/EulerProject/IDCC20/blob/master/IDCC-2020-poster.pdf)
+-[Link to IDCC zenodo DOI] (10.5281/zenodo.3666830)
 
+## Euler input and output files
+-[Link to use cases datasets] (https://github.com/EulerProject/IDCC20/tree/master/Euler-experiments)
 
 ## Speices occurene dataset
 
