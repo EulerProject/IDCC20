@@ -1,0 +1,73 @@
+digraph{
+rankdir=RL
+node[shape=note style=filled fillcolor="#FFFFCC" fontname="helvetica"] 
+"1600.Asia"
+"1600.Formosa"
+"1600.DutchTaiwanSouth"
+"1600.SpanishTaiwanNorth"
+node[shape=box style="filled,rounded" fillcolor="#EEEEEE" fontname="helvetica"] 
+"2018.MainlandChina\n1600.MainlandChina"
+"2018.JapanOther\n1600.JapanOther"
+"2018.ChinaOther\n1600.ChinaOther"
+"2018.AsiaOther\n1600.AsiaOther"
+"2018.TaiwanOther\n1600.TaiwanOther"
+"2018.Japan\n1600.EdoPeriod"
+"2018.JapanIslands\n1600.JapanIslands"
+"2018.PRChina\n1600.MingDynasty"
+node[shape=box style=filled fillcolor="#CCFFCC" fontname="helvetica"] 
+"2018.ROChina"
+"2018.Asia"
+"2018.Taiwan"
+edge[arrowhead=normal style=solid color="#FF0000" constraint=true penwidth=1]
+"1600.Formosa" -> "2018.ROChina"
+"1600.Asia" -> "2018.Asia"
+edge[arrowhead=normal style=solid color="#000000" constraint=true penwidth=1]
+"2018.Taiwan" -> "2018.ROChina"
+"2018.ROChina" -> "2018.Asia"
+"2018.ChinaOther\n1600.ChinaOther" -> "2018.PRChina\n1600.MingDynasty"
+"2018.MainlandChina\n1600.MainlandChina" -> "2018.PRChina\n1600.MingDynasty"
+"2018.JapanIslands\n1600.JapanIslands" -> "2018.Japan\n1600.EdoPeriod"
+"1600.SpanishTaiwanNorth" -> "1600.Formosa"
+"1600.DutchTaiwanSouth" -> "2018.Taiwan"
+"2018.TaiwanOther\n1600.TaiwanOther" -> "1600.Formosa"
+"2018.Japan\n1600.EdoPeriod" -> "1600.Asia"
+"1600.DutchTaiwanSouth" -> "1600.Formosa"
+"1600.SpanishTaiwanNorth" -> "2018.Taiwan"
+"1600.Formosa" -> "1600.Asia"
+"2018.JapanOther\n1600.JapanOther" -> "2018.Japan\n1600.EdoPeriod"
+"2018.AsiaOther\n1600.AsiaOther" -> "1600.Asia"
+"2018.PRChina\n1600.MingDynasty" -> "1600.Asia"
+edge[arrowhead=normal style=dotted color="#000000" constraint=true penwidth=1]
+edge[arrowhead=none style=dashed color="#FF0000" constraint=false penwidth=1]
+"1600.Asia" -> "2018.ROChina"
+"1600.Asia" -> "2018.Taiwan"
+"1600.Formosa" -> "2018.Taiwan"
+node[shape=box] 
+{rank=source Legend [fillcolor= white margin=0 label=< 
+ <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"> 
+<TR> <TD COLSPAN="2"><font face="Arial Black"> Nodes</font></TD> </TR> 
+<TR> 
+ <TD bgcolor="#FFFFCC" fontname="helvetica">1600</TD> 
+ <TD>4</TD> 
+ </TR> 
+<TR> 
+ <TD bgcolor="#EEEEEE" fontname="helvetica">congruent</TD> 
+ <TD>8</TD> 
+ </TR> 
+<TR> 
+ <TD bgcolor="#CCFFCC" fontname="helvetica">2018</TD> 
+ <TD>3</TD> 
+ </TR> 
+<TR> <TD COLSPAN="2"><font face = "Arial Black"> Edges </font></TD> </TR> 
+<TR> 
+ <TD><font color ="#FF0000">is_a (inferred)</font></TD><TD>2</TD>
+</TR>
+<TR> 
+ <TD><font color ="#000000">is_a (input)</font></TD><TD>15</TD>
+</TR>
+<TR> 
+ <TD><font color ="#FF0000">overlaps (inferred)</font></TD><TD>3</TD>
+</TR>
+</TABLE> 
+ >] } 
+}

@@ -1,0 +1,95 @@
+1945.Asia:
+  concept: Asia
+  group: '1945'
+1945.ROChina:
+  concept: ROChina
+  group: '1945'
+1949.Asia:
+  concept: Asia
+  group: '1949'
+1949.PRChina:
+  concept: PRChina
+  group: '1949'
+1949.ROChina:
+  concept: ROChina
+  group: '1949'
+congruent.1945.AsiaOther\n1949.AsiaOther:
+  concept: 1945.AsiaOther\n1949.AsiaOther
+  group: congruent
+congruent.1945.ChinaOther\n1949.ChinaOther:
+  concept: 1945.ChinaOther\n1949.ChinaOther
+  group: congruent
+congruent.1945.JapanIslands\n1949.JapanIslands:
+  concept: 1945.JapanIslands\n1949.JapanIslands
+  group: congruent
+congruent.1945.JapanOther\n1949.JapanOther:
+  concept: 1945.JapanOther\n1949.JapanOther
+  group: congruent
+congruent.1945.MainlandChina\n1949.MainlandChina:
+  concept: 1945.MainlandChina\n1949.MainlandChina
+  group: congruent
+congruent.1945.ShowaPeriod\n1949.ShowaPeriod:
+  concept: 1945.ShowaPeriod\n1949.ShowaPeriod
+  group: congruent
+congruent.1945.TaiwanOther\n1949.TaiwanOther:
+  concept: 1945.TaiwanOther\n1949.TaiwanOther
+  group: congruent
+congruent.1945.Taiwan\n1949.Taiwan:
+  concept: 1945.Taiwan\n1949.Taiwan
+  group: congruent
+1945.AsiaOther\n1949.AsiaOther_1949.Asia:
+  label: is_a (input)
+  s: 1945.AsiaOther\n1949.AsiaOther
+  t: 1949.Asia
+1945.ChinaOther\n1949.ChinaOther_1949.PRChina:
+  label: is_a (input)
+  s: 1945.ChinaOther\n1949.ChinaOther
+  t: 1949.PRChina
+1945.JapanIslands\n1949.JapanIslands_1945.ShowaPeriod\n1949.ShowaPeriod:
+  label: is_a (input)
+  s: 1945.JapanIslands\n1949.JapanIslands
+  t: 1945.ShowaPeriod\n1949.ShowaPeriod
+1945.JapanOther\n1949.JapanOther_1945.ShowaPeriod\n1949.ShowaPeriod:
+  label: is_a (input)
+  s: 1945.JapanOther\n1949.JapanOther
+  t: 1945.ShowaPeriod\n1949.ShowaPeriod
+1945.MainlandChina\n1949.MainlandChina_1949.PRChina:
+  label: is_a (input)
+  s: 1945.MainlandChina\n1949.MainlandChina
+  t: 1949.PRChina
+1945.ROChina_1945.Asia:
+  label: is_a (input)
+  s: 1945.ROChina
+  t: 1945.Asia
+1945.ShowaPeriod\n1949.ShowaPeriod_1949.Asia:
+  label: is_a (input)
+  s: 1945.ShowaPeriod\n1949.ShowaPeriod
+  t: 1949.Asia
+1945.TaiwanOther\n1949.TaiwanOther_1949.ROChina:
+  label: is_a (input)
+  s: 1945.TaiwanOther\n1949.TaiwanOther
+  t: 1949.ROChina
+1945.Taiwan\n1949.Taiwan_1949.ROChina:
+  label: is_a (input)
+  s: 1945.Taiwan\n1949.Taiwan
+  t: 1949.ROChina
+1949.Asia_1945.Asia:
+  label: is_a (inferred)
+  s: 1949.Asia
+  t: 1945.Asia
+1949.Asia_1945.ROChina:
+  label: overlaps (inferred)
+  s: 1949.Asia
+  t: 1945.ROChina
+1949.PRChina_1945.ROChina:
+  label: is_a (inferred)
+  s: 1949.PRChina
+  t: 1945.ROChina
+1949.ROChina_1945.ROChina:
+  label: is_a (inferred)
+  s: 1949.ROChina
+  t: 1945.ROChina
+1949.ROChina_1949.Asia:
+  label: is_a (input)
+  s: 1949.ROChina
+  t: 1949.Asia

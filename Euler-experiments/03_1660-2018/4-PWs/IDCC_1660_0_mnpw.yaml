@@ -1,0 +1,73 @@
+congruent.2018.AsiaOther\n1660.AsiaOther:
+  concept: 2018.AsiaOther\n1660.AsiaOther
+  group: congruent
+congruent.2018.Asia\n1660.Asia:
+  concept: 2018.Asia\n1660.Asia
+  group: congruent
+congruent.2018.ChinaOther\n1660.ChinaOther:
+  concept: 2018.ChinaOther\n1660.ChinaOther
+  group: congruent
+congruent.2018.JapanIslands\n1660.JapanIslands:
+  concept: 2018.JapanIslands\n1660.JapanIslands
+  group: congruent
+congruent.2018.JapanOther\n1660.JapanOther:
+  concept: 2018.JapanOther\n1660.JapanOther
+  group: congruent
+congruent.2018.Japan\n1660.EdoPeriod:
+  concept: 2018.Japan\n1660.EdoPeriod
+  group: congruent
+congruent.2018.MainlandChina\n1660.MainlandChina:
+  concept: 2018.MainlandChina\n1660.MainlandChina
+  group: congruent
+congruent.2018.PRChina\n1660.QingDynasty:
+  concept: 2018.PRChina\n1660.QingDynasty
+  group: congruent
+congruent.2018.ROChina\n1660.KingdomOfTungning:
+  concept: 2018.ROChina\n1660.KingdomOfTungning
+  group: congruent
+congruent.2018.TaiwanOther\n1660.TaiwanOther:
+  concept: 2018.TaiwanOther\n1660.TaiwanOther
+  group: congruent
+congruent.2018.Taiwan\n1660.Formosa:
+  concept: 2018.Taiwan\n1660.Formosa
+  group: congruent
+2018.AsiaOther\n1660.AsiaOther_2018.Asia\n1660.Asia:
+  label: is_a (input)
+  s: 2018.AsiaOther\n1660.AsiaOther
+  t: 2018.Asia\n1660.Asia
+2018.ChinaOther\n1660.ChinaOther_2018.PRChina\n1660.QingDynasty:
+  label: is_a (input)
+  s: 2018.ChinaOther\n1660.ChinaOther
+  t: 2018.PRChina\n1660.QingDynasty
+2018.JapanIslands\n1660.JapanIslands_2018.Japan\n1660.EdoPeriod:
+  label: is_a (input)
+  s: 2018.JapanIslands\n1660.JapanIslands
+  t: 2018.Japan\n1660.EdoPeriod
+2018.JapanOther\n1660.JapanOther_2018.Japan\n1660.EdoPeriod:
+  label: is_a (input)
+  s: 2018.JapanOther\n1660.JapanOther
+  t: 2018.Japan\n1660.EdoPeriod
+2018.Japan\n1660.EdoPeriod_2018.Asia\n1660.Asia:
+  label: is_a (input)
+  s: 2018.Japan\n1660.EdoPeriod
+  t: 2018.Asia\n1660.Asia
+2018.MainlandChina\n1660.MainlandChina_2018.PRChina\n1660.QingDynasty:
+  label: is_a (input)
+  s: 2018.MainlandChina\n1660.MainlandChina
+  t: 2018.PRChina\n1660.QingDynasty
+2018.PRChina\n1660.QingDynasty_2018.Asia\n1660.Asia:
+  label: is_a (input)
+  s: 2018.PRChina\n1660.QingDynasty
+  t: 2018.Asia\n1660.Asia
+2018.ROChina\n1660.KingdomOfTungning_2018.Asia\n1660.Asia:
+  label: is_a (input)
+  s: 2018.ROChina\n1660.KingdomOfTungning
+  t: 2018.Asia\n1660.Asia
+2018.TaiwanOther\n1660.TaiwanOther_2018.ROChina\n1660.KingdomOfTungning:
+  label: is_a (input)
+  s: 2018.TaiwanOther\n1660.TaiwanOther
+  t: 2018.ROChina\n1660.KingdomOfTungning
+2018.Taiwan\n1660.Formosa_2018.ROChina\n1660.KingdomOfTungning:
+  label: is_a (input)
+  s: 2018.Taiwan\n1660.Formosa
+  t: 2018.ROChina\n1660.KingdomOfTungning

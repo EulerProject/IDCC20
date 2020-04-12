@@ -1,0 +1,185 @@
+1600.Asia:
+  concept: Asia
+  group: '1600'
+1600.AsiaOther:
+  concept: AsiaOther
+  group: '1600'
+1600.ChinaOther:
+  concept: ChinaOther
+  group: '1600'
+1600.DutchTaiwanSouth:
+  concept: DutchTaiwanSouth
+  group: '1600'
+1600.EdoPeriod:
+  concept: EdoPeriod
+  group: '1600'
+1600.Formosa:
+  concept: Formosa
+  group: '1600'
+1600.JapanIslands:
+  concept: JapanIslands
+  group: '1600'
+1600.JapanOther:
+  concept: JapanOther
+  group: '1600'
+1600.MainlandChina:
+  concept: MainlandChina
+  group: '1600'
+1600.MingDynasty:
+  concept: MingDynasty
+  group: '1600'
+1600.SpanishTaiwanNorth:
+  concept: SpanishTaiwanNorth
+  group: '1600'
+1600.TaiwanOther:
+  concept: TaiwanOther
+  group: '1600'
+2018.Asia:
+  concept: Asia
+  group: '2018'
+2018.AsiaOther:
+  concept: AsiaOther
+  group: '2018'
+2018.ChinaOther:
+  concept: ChinaOther
+  group: '2018'
+2018.Japan:
+  concept: Japan
+  group: '2018'
+2018.JapanIslands:
+  concept: JapanIslands
+  group: '2018'
+2018.JapanOther:
+  concept: JapanOther
+  group: '2018'
+2018.MainlandChina:
+  concept: MainlandChina
+  group: '2018'
+2018.PRChina:
+  concept: PRChina
+  group: '2018'
+2018.ROChina:
+  concept: ROChina
+  group: '2018'
+2018.Taiwan:
+  concept: Taiwan
+  group: '2018'
+2018.TaiwanOther:
+  concept: TaiwanOther
+  group: '2018'
+1600.AsiaOther_1600.Asia:
+  label: isa
+  s: 1600.AsiaOther
+  t: 1600.Asia
+1600.ChinaOther_1600.MingDynasty:
+  label: isa
+  s: 1600.ChinaOther
+  t: 1600.MingDynasty
+1600.DutchTaiwanSouth_1600.Formosa:
+  label: isa
+  s: 1600.DutchTaiwanSouth
+  t: 1600.Formosa
+1600.EdoPeriod_1600.Asia:
+  label: isa
+  s: 1600.EdoPeriod
+  t: 1600.Asia
+1600.Formosa_1600.Asia:
+  label: isa
+  s: 1600.Formosa
+  t: 1600.Asia
+1600.JapanIslands_1600.EdoPeriod:
+  label: isa
+  s: 1600.JapanIslands
+  t: 1600.EdoPeriod
+1600.JapanOther_1600.EdoPeriod:
+  label: isa
+  s: 1600.JapanOther
+  t: 1600.EdoPeriod
+1600.MainlandChina_1600.MingDynasty:
+  label: isa
+  s: 1600.MainlandChina
+  t: 1600.MingDynasty
+1600.MingDynasty_1600.Asia:
+  label: isa
+  s: 1600.MingDynasty
+  t: 1600.Asia
+1600.SpanishTaiwanNorth_1600.Formosa:
+  label: isa
+  s: 1600.SpanishTaiwanNorth
+  t: 1600.Formosa
+1600.TaiwanOther_1600.Formosa:
+  label: isa
+  s: 1600.TaiwanOther
+  t: 1600.Formosa
+2018.AsiaOther_1600.AsiaOther:
+  label: '='
+  s: 2018.AsiaOther
+  t: 1600.AsiaOther
+2018.AsiaOther_2018.Asia:
+  label: isa
+  s: 2018.AsiaOther
+  t: 2018.Asia
+2018.ChinaOther_1600.ChinaOther:
+  label: '='
+  s: 2018.ChinaOther
+  t: 1600.ChinaOther
+2018.ChinaOther_2018.PRChina:
+  label: isa
+  s: 2018.ChinaOther
+  t: 2018.PRChina
+2018.JapanIslands_1600.JapanIslands:
+  label: '='
+  s: 2018.JapanIslands
+  t: 1600.JapanIslands
+2018.JapanIslands_2018.Japan:
+  label: isa
+  s: 2018.JapanIslands
+  t: 2018.Japan
+2018.JapanOther_1600.JapanOther:
+  label: '='
+  s: 2018.JapanOther
+  t: 1600.JapanOther
+2018.JapanOther_2018.Japan:
+  label: isa
+  s: 2018.JapanOther
+  t: 2018.Japan
+2018.Japan_2018.Asia:
+  label: isa
+  s: 2018.Japan
+  t: 2018.Asia
+2018.MainlandChina_1600.MainlandChina:
+  label: '='
+  s: 2018.MainlandChina
+  t: 1600.MainlandChina
+2018.MainlandChina_2018.PRChina:
+  label: isa
+  s: 2018.MainlandChina
+  t: 2018.PRChina
+2018.PRChina_2018.Asia:
+  label: isa
+  s: 2018.PRChina
+  t: 2018.Asia
+2018.ROChina_2018.Asia:
+  label: isa
+  s: 2018.ROChina
+  t: 2018.Asia
+2018.TaiwanOther_1600.TaiwanOther:
+  label: '='
+  s: 2018.TaiwanOther
+  t: 1600.TaiwanOther
+2018.TaiwanOther_2018.ROChina:
+  label: isa
+  s: 2018.TaiwanOther
+  t: 2018.ROChina
+2018.Taiwan_1600.DutchTaiwanSouth:
+  label: '>'
+  s: 2018.Taiwan
+  t: 1600.DutchTaiwanSouth
+2018.Taiwan_1600.SpanishTaiwanNorth:
+  label: '>'
+  s: 2018.Taiwan
+  t: 1600.SpanishTaiwanNorth
+2018.Taiwan_2018.ROChina:
+  label: isa
+  s: 2018.Taiwan
+  t: 2018.ROChina

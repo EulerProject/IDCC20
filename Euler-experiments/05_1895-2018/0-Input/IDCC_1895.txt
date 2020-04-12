@@ -1,0 +1,29 @@
+#Taxonomy 1 2018
+#Taxonomy 2 1895
+
+taxonomy 2018 2018T1
+(Asia ROChina PRChina Japan AsiaOther)
+(ROChina Taiwan TaiwanOther)
+(PRChina MainlandChina ChinaOther)
+(Japan JapanIslands JapanOther)
+
+taxonomy 1895 1895T2
+(Asia QingDynasty JapaneseEmpireMeijiPeriod AsiaOther)
+(QingDynasty MainlandChina ChinaOther)
+(JapaneseEmpireMeijiPeriod JapanIslands JapanOther Taiwan TaiwanOther)
+
+articulation 2018-1895 2018T1-1895T2
+#[2018.Asia equals 1895.Asia]
+[2018.AsiaOther equals 1895.AsiaOther]
+[2018.Taiwan equals 1895.Taiwan]
+[2018.MainlandChina equals 1895.MainlandChina]
+[2018.JapanIslands equals 1895.JapanIslands]
+[2018.TaiwanOther equals 1895.TaiwanOther]
+[2018.ChinaOther equals 1895.ChinaOther]
+[2018.JapanOther equals 1895.JapanOther]
+
+
+
+
+
+

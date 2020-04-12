@@ -1,0 +1,11 @@
+firstTName = '2018'
+secondTName = '1949'
+thirdTName = ''
+fourthTName = ''
+fifthTName = ''
+allRcgEdgesDict = {}
+numOfPws = 1
+avFlag = False
+allRcgNodesDict = {'congruent.2018.AsiaOther\\n1949.AsiaOther': {'concept': '2018.AsiaOther\\n1949.AsiaOther', 'group': 'congruent'}, '2018.Asia': {'concept': 'Asia', 'group': '2018'}, 'congruent.2018.Taiwan\\n1949.Taiwan': {'concept': '2018.Taiwan\\n1949.Taiwan', 'group': 'congruent'}, 'congruent.2018.JapanOther\\n1949.JapanOther': {'concept': '2018.JapanOther\\n1949.JapanOther', 'group': 'congruent'}, 'congruent.2018.ChinaOther\\n1949.ChinaOther': {'concept': '2018.ChinaOther\\n1949.ChinaOther', 'group': 'congruent'}, 'congruent.2018.Japan\\n1949.ShowaPeriod': {'concept': '2018.Japan\\n1949.ShowaPeriod', 'group': 'congruent'}, 'congruent.2018.ROChina\\n1949.ROChina': {'concept': '2018.ROChina\\n1949.ROChina', 'group': 'congruent'}, '1949.Asia': {'concept': 'Asia', 'group': '1949'}, 'congruent.2018.TaiwanOther\\n1949.TaiwanOther': {'concept': '2018.TaiwanOther\\n1949.TaiwanOther', 'group': 'congruent'}, 'congruent.2018.MainlandChina\\n1949.MainlandChina': {'concept': '2018.MainlandChina\\n1949.MainlandChina', 'group': 'congruent'}, 'congruent.2018.JapanIslands\\n1949.JapanIslands': {'concept': '2018.JapanIslands\\n1949.JapanIslands', 'group': 'congruent'}, 'congruent.2018.PRChina\\n1949.PRChina': {'concept': '2018.PRChina\\n1949.PRChina', 'group': 'congruent'}}
+trlist = [['1949.Asia', '2018.Asia', 1], ['2018.AsiaOther\\n1949.AsiaOther', '1949.Asia', 0], ['2018.Japan\\n1949.ShowaPeriod', '1949.Asia', 0], ['2018.JapanOther\\n1949.JapanOther', '2018.Japan\\n1949.ShowaPeriod', 0], ['2018.PRChina\\n1949.PRChina', '2018.Asia', 0], ['2018.MainlandChina\\n1949.MainlandChina', '2018.PRChina\\n1949.PRChina', 0], ['2018.JapanIslands\\n1949.JapanIslands', '2018.Japan\\n1949.ShowaPeriod', 0], ['2018.ChinaOther\\n1949.ChinaOther', '2018.PRChina\\n1949.PRChina', 0], ['2018.ROChina\\n1949.ROChina', '1949.Asia', 0], ['2018.Taiwan\\n1949.Taiwan', '2018.ROChina\\n1949.ROChina', 0], ['2018.TaiwanOther\\n1949.TaiwanOther', '2018.ROChina\\n1949.ROChina', 0], ['2018.AsiaOther\\n1949.AsiaOther', '2018.Asia', 2], ['2018.Japan\\n1949.ShowaPeriod', '2018.Asia', 2], ['2018.ROChina\\n1949.ROChina', '2018.Asia', 2]]
+avFlag = True

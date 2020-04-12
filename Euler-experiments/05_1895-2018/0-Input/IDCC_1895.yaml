@@ -1,0 +1,167 @@
+1895.Asia:
+  concept: Asia
+  group: '1895'
+1895.AsiaOther:
+  concept: AsiaOther
+  group: '1895'
+1895.ChinaOther:
+  concept: ChinaOther
+  group: '1895'
+1895.JapanIslands:
+  concept: JapanIslands
+  group: '1895'
+1895.JapanOther:
+  concept: JapanOther
+  group: '1895'
+1895.JapaneseEmpireMeijiPeriod:
+  concept: JapaneseEmpireMeijiPeriod
+  group: '1895'
+1895.MainlandChina:
+  concept: MainlandChina
+  group: '1895'
+1895.QingDynasty:
+  concept: QingDynasty
+  group: '1895'
+1895.Taiwan:
+  concept: Taiwan
+  group: '1895'
+1895.TaiwanOther:
+  concept: TaiwanOther
+  group: '1895'
+2018.Asia:
+  concept: Asia
+  group: '2018'
+2018.AsiaOther:
+  concept: AsiaOther
+  group: '2018'
+2018.ChinaOther:
+  concept: ChinaOther
+  group: '2018'
+2018.Japan:
+  concept: Japan
+  group: '2018'
+2018.JapanIslands:
+  concept: JapanIslands
+  group: '2018'
+2018.JapanOther:
+  concept: JapanOther
+  group: '2018'
+2018.MainlandChina:
+  concept: MainlandChina
+  group: '2018'
+2018.PRChina:
+  concept: PRChina
+  group: '2018'
+2018.ROChina:
+  concept: ROChina
+  group: '2018'
+2018.Taiwan:
+  concept: Taiwan
+  group: '2018'
+2018.TaiwanOther:
+  concept: TaiwanOther
+  group: '2018'
+1895.AsiaOther_1895.Asia:
+  label: isa
+  s: 1895.AsiaOther
+  t: 1895.Asia
+1895.ChinaOther_1895.QingDynasty:
+  label: isa
+  s: 1895.ChinaOther
+  t: 1895.QingDynasty
+1895.JapanIslands_1895.JapaneseEmpireMeijiPeriod:
+  label: isa
+  s: 1895.JapanIslands
+  t: 1895.JapaneseEmpireMeijiPeriod
+1895.JapanOther_1895.JapaneseEmpireMeijiPeriod:
+  label: isa
+  s: 1895.JapanOther
+  t: 1895.JapaneseEmpireMeijiPeriod
+1895.JapaneseEmpireMeijiPeriod_1895.Asia:
+  label: isa
+  s: 1895.JapaneseEmpireMeijiPeriod
+  t: 1895.Asia
+1895.MainlandChina_1895.QingDynasty:
+  label: isa
+  s: 1895.MainlandChina
+  t: 1895.QingDynasty
+1895.QingDynasty_1895.Asia:
+  label: isa
+  s: 1895.QingDynasty
+  t: 1895.Asia
+1895.TaiwanOther_1895.JapaneseEmpireMeijiPeriod:
+  label: isa
+  s: 1895.TaiwanOther
+  t: 1895.JapaneseEmpireMeijiPeriod
+1895.Taiwan_1895.JapaneseEmpireMeijiPeriod:
+  label: isa
+  s: 1895.Taiwan
+  t: 1895.JapaneseEmpireMeijiPeriod
+2018.AsiaOther_1895.AsiaOther:
+  label: '='
+  s: 2018.AsiaOther
+  t: 1895.AsiaOther
+2018.AsiaOther_2018.Asia:
+  label: isa
+  s: 2018.AsiaOther
+  t: 2018.Asia
+2018.ChinaOther_1895.ChinaOther:
+  label: '='
+  s: 2018.ChinaOther
+  t: 1895.ChinaOther
+2018.ChinaOther_2018.PRChina:
+  label: isa
+  s: 2018.ChinaOther
+  t: 2018.PRChina
+2018.JapanIslands_1895.JapanIslands:
+  label: '='
+  s: 2018.JapanIslands
+  t: 1895.JapanIslands
+2018.JapanIslands_2018.Japan:
+  label: isa
+  s: 2018.JapanIslands
+  t: 2018.Japan
+2018.JapanOther_1895.JapanOther:
+  label: '='
+  s: 2018.JapanOther
+  t: 1895.JapanOther
+2018.JapanOther_2018.Japan:
+  label: isa
+  s: 2018.JapanOther
+  t: 2018.Japan
+2018.Japan_2018.Asia:
+  label: isa
+  s: 2018.Japan
+  t: 2018.Asia
+2018.MainlandChina_1895.MainlandChina:
+  label: '='
+  s: 2018.MainlandChina
+  t: 1895.MainlandChina
+2018.MainlandChina_2018.PRChina:
+  label: isa
+  s: 2018.MainlandChina
+  t: 2018.PRChina
+2018.PRChina_2018.Asia:
+  label: isa
+  s: 2018.PRChina
+  t: 2018.Asia
+2018.ROChina_2018.Asia:
+  label: isa
+  s: 2018.ROChina
+  t: 2018.Asia
+2018.TaiwanOther_1895.TaiwanOther:
+  label: '='
+  s: 2018.TaiwanOther
+  t: 1895.TaiwanOther
+2018.TaiwanOther_2018.ROChina:
+  label: isa
+  s: 2018.TaiwanOther
+  t: 2018.ROChina
+2018.Taiwan_1895.Taiwan:
+  label: '='
+  s: 2018.Taiwan
+  t: 1895.Taiwan
+2018.Taiwan_2018.ROChina:
+  label: isa
+  s: 2018.Taiwan
+  t: 2018.ROChina

@@ -1,0 +1,29 @@
+#Taxonomy 1 1945
+#Taxonomy 2 1949
+
+taxonomy 1945 1945T1
+(Asia ROChina ShowaPeriod AsiaOther)
+(ROChina MainlandChina ChinaOther Taiwan TaiwanOther)
+(ShowaPeriod JapanIslands JapanOther)
+
+taxonomy 1949 1949T2
+(Asia ROChina ShowaPeriod AsiaOther)
+(ROChina Taiwan TaiwanOther)
+(PRChina MainlandChina ChinaOther)
+(ShowaPeriod JapanIslands JapanOther)
+
+articulation 1945-1949 1945T1-1949T2
+#[1945.Asia equals 1949.Asia]
+[1945.AsiaOther equals 1949.AsiaOther]
+[1945.Taiwan equals 1949.Taiwan]
+[1945.MainlandChina equals 1949.MainlandChina]
+[1945.JapanIslands equals 1949.JapanIslands]
+[1945.TaiwanOther equals 1949.TaiwanOther]
+[1945.ChinaOther equals 1949.ChinaOther]
+[1945.JapanOther equals 1949.JapanOther]
+
+
+
+
+
+

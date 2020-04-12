@@ -1,0 +1,37 @@
+##### Executing command:
+
+/Users/jessicacheng/EulerX/src-el/euler2 align IDCC_1500.txt -r clingo 
+
+
+##### Euler version:
+
+master
+49e63e6a27be97ab30832180a47d214494388e15
+
+
+##### GraphViz version:
+
+dot - graphviz version 2.36.0 (20140111.2315)
+
+
+##### DLV version:
+
+DLV [build BEN/Dec 17 2012   gcc 4.2.1 (Apple Inc. build 5666) (dot 3)]
+
+usage: dlv {FRONTEND} {OPTIONS} [filename [filename [...]]]
+
+Specify -help for more detailed usage information.
+
+
+##### Running User, Host and Date:
+User:	jessicacheng
+Host:	wirelessprv-10-195-175-58.near.illinois.edu
+Date:	2019-08-22-13:51:36
+
+
+##### Euler Outputs:
+******* You are running example IDCC_1500 *******
+
+Possible world 0:
+{2018.Asia">"1500.PortugeseFormosa, 2018.Asia">"1500.MuromachiPeriod, 2018.Asia">"1500.MingDynasty, 2018.Asia">"1500.JapanOther, 2018.Japan">"1500.JapanOther, 2018.Asia">"1500.TaiwanOther, 2018.ROChina">"1500.TaiwanOther, 2018.Asia">"1500.AsiaOther, 2018.Asia">"1500.ChinaOther, 2018.PRChina">"1500.ChinaOther, 2018.Asia">"1500.MainlandChina, 2018.PRChina">"1500.MainlandChina, 2018.Asia">"1500.JapanIslands, 2018.Japan">"1500.JapanIslands, 2018.Asia">"1500.Taiwan, 2018.ROChina">"1500.Taiwan, 2018.ROChina"="1500.PortugeseFormosa, 2018.Japan"="1500.MuromachiPeriod, 2018.Asia"="1500.Asia, 2018.PRChina"="1500.MingDynasty, 2018.JapanOther"="1500.JapanOther, 2018.TaiwanOther"="1500.TaiwanOther, 2018.AsiaOther"="1500.AsiaOther, 2018.ChinaOther"="1500.ChinaOther, 2018.MainlandChina"="1500.MainlandChina, 2018.JapanIslands"="1500.JapanIslands, 2018.Taiwan"="1500.Taiwan, 2018.TaiwanOther"<"1500.PortugeseFormosa, 2018.Taiwan"<"1500.PortugeseFormosa, 2018.JapanOther"<"1500.MuromachiPeriod, 2018.JapanIslands"<"1500.MuromachiPeriod, 2018.AsiaOther"<"1500.Asia, 2018.ChinaOther"<"1500.Asia, 2018.PRChina"<"1500.Asia, 2018.MainlandChina"<"1500.Asia, 2018.JapanOther"<"1500.Asia, 2018.Japan"<"1500.Asia, 2018.JapanIslands"<"1500.Asia, 2018.TaiwanOther"<"1500.Asia, 2018.ROChina"<"1500.Asia, 2018.Taiwan"<"1500.Asia, 2018.ChinaOther"<"1500.MingDynasty, 2018.MainlandChina"<"1500.MingDynasty, 2018.JapanIslands"!"1500.PortugeseFormosa, 2018.Japan"!"1500.PortugeseFormosa, 2018.JapanOther"!"1500.PortugeseFormosa, 2018.MainlandChina"!"1500.PortugeseFormosa, 2018.PRChina"!"1500.PortugeseFormosa, 2018.ChinaOther"!"1500.PortugeseFormosa, 2018.AsiaOther"!"1500.PortugeseFormosa, 2018.Taiwan"!"1500.MuromachiPeriod, 2018.ROChina"!"1500.MuromachiPeriod, 2018.TaiwanOther"!"1500.MuromachiPeriod, 2018.MainlandChina"!"1500.MuromachiPeriod, 2018.PRChina"!"1500.MuromachiPeriod, 2018.ChinaOther"!"1500.MuromachiPeriod, 2018.AsiaOther"!"1500.MuromachiPeriod, 2018.Taiwan"!"1500.MingDynasty, 2018.ROChina"!"1500.MingDynasty, 2018.TaiwanOther"!"1500.MingDynasty, 2018.JapanIslands"!"1500.MingDynasty, 2018.Japan"!"1500.MingDynasty, 2018.JapanOther"!"1500.MingDynasty, 2018.AsiaOther"!"1500.MingDynasty, 2018.AsiaOther"!"1500.JapanOther, 2018.ChinaOther"!"1500.JapanOther, 2018.PRChina"!"1500.JapanOther, 2018.MainlandChina"!"1500.JapanOther, 2018.JapanIslands"!"1500.JapanOther, 2018.TaiwanOther"!"1500.JapanOther, 2018.ROChina"!"1500.JapanOther, 2018.Taiwan"!"1500.JapanOther, 2018.AsiaOther"!"1500.TaiwanOther, 2018.ChinaOther"!"1500.TaiwanOther, 2018.PRChina"!"1500.TaiwanOther, 2018.MainlandChina"!"1500.TaiwanOther, 2018.JapanOther"!"1500.TaiwanOther, 2018.Japan"!"1500.TaiwanOther, 2018.JapanIslands"!"1500.TaiwanOther, 2018.Taiwan"!"1500.TaiwanOther, 2018.ChinaOther"!"1500.AsiaOther, 2018.PRChina"!"1500.AsiaOther, 2018.MainlandChina"!"1500.AsiaOther, 2018.JapanOther"!"1500.AsiaOther, 2018.Japan"!"1500.AsiaOther, 2018.JapanIslands"!"1500.AsiaOther, 2018.TaiwanOther"!"1500.AsiaOther, 2018.ROChina"!"1500.AsiaOther, 2018.Taiwan"!"1500.AsiaOther, 2018.AsiaOther"!"1500.ChinaOther, 2018.MainlandChina"!"1500.ChinaOther, 2018.JapanOther"!"1500.ChinaOther, 2018.Japan"!"1500.ChinaOther, 2018.JapanIslands"!"1500.ChinaOther, 2018.TaiwanOther"!"1500.ChinaOther, 2018.ROChina"!"1500.ChinaOther, 2018.Taiwan"!"1500.ChinaOther, 2018.AsiaOther"!"1500.MainlandChina, 2018.ChinaOther"!"1500.MainlandChina, 2018.JapanOther"!"1500.MainlandChina, 2018.Japan"!"1500.MainlandChina, 2018.JapanIslands"!"1500.MainlandChina, 2018.TaiwanOther"!"1500.MainlandChina, 2018.ROChina"!"1500.MainlandChina, 2018.Taiwan"!"1500.MainlandChina, 2018.AsiaOther"!"1500.JapanIslands, 2018.ChinaOther"!"1500.JapanIslands, 2018.PRChina"!"1500.JapanIslands, 2018.MainlandChina"!"1500.JapanIslands, 2018.JapanOther"!"1500.JapanIslands, 2018.TaiwanOther"!"1500.JapanIslands, 2018.ROChina"!"1500.JapanIslands, 2018.Taiwan"!"1500.JapanIslands, 2018.AsiaOther"!"1500.Taiwan, 2018.ChinaOther"!"1500.Taiwan, 2018.PRChina"!"1500.Taiwan, 2018.MainlandChina"!"1500.Taiwan, 2018.JapanOther"!"1500.Taiwan, 2018.Japan"!"1500.Taiwan, 2018.JapanIslands"!"1500.Taiwan, 2018.TaiwanOther"!"1500.Taiwan}
+

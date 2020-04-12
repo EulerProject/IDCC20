@@ -1,0 +1,459 @@
+%%% Max Number of Euler Regions
+#maxint=63.
+
+%%% Euler Regions
+r(M):- #int(M),M>=1,M<=#maxint.
+
+%%% Concepts
+tax(t1949,0).
+concept2(A, B) :- concept(A,B,_).
+concept2(c1949_PRChina,0).
+concept2(c1949_ROChina,0).
+concept(c1949_AsiaOther,0,0).
+concept2(c1949_Asia,0).
+concept(c1949_ChinaOther,0,1).
+concept(c1949_MainlandChina,0,2).
+concept(c1949_JapanOther,0,3).
+concept(c1949_JapanIslands,0,4).
+concept(c1949_TaiwanOther,0,5).
+concept2(c1949_ShowaPeriod,0).
+concept(c1949_Taiwan,0,6).
+tax(t1945,1).
+concept2(A, B) :- concept(A,B,_).
+concept(c1945_JapanOther,1,0).
+concept2(c1945_ROChina,1).
+concept(c1945_AsiaOther,1,1).
+concept2(c1945_Asia,1).
+concept(c1945_ChinaOther,1,2).
+concept(c1945_MainlandChina,1,3).
+concept(c1945_JapanIslands,1,4).
+concept(c1945_TaiwanOther,1,5).
+concept2(c1945_ShowaPeriod,1).
+concept(c1945_Taiwan,1,6).
+
+%%% Euler Bit
+bit(M, 0, V):-r(M),M1=M/1, #mod(M1,8,V).
+bit(M, 1, V):-r(M),M1=M/8, #mod(M1,8,V).
+
+
+%%% Meaning of regions
+in(X, M) :- r(M),concept(X,T,N),N1=N+1,bit(M,T,N1).
+out(X, M) :- r(M),concept(X,T,N),N1=N+1,not bit(M,T,N1).
+in(X, M) :- r(M),concept2(X,_),not out(X, M).
+out(X, M) :- out3(X, M, _), ix.
+irs(M) :- in(X, M), out(X, M), r(M), concept2(X,_).
+
+%%% Constraints of regions.
+irs(X) :- ir(X, _).
+vrs(X) :- vr(X, _).
+vr(X, X) :- not irs(X), r(X).
+ir(X, X) :- not vrs(X), r(X), pw.
+ie(prod(A,B)) :- vr(X, A), ir(X, B), ix.
+:- vrs(X), irs(X), pw.
+
+%%% Inconsistency Explanation.
+ie(s(R, A, Y)) :- pie(R, A, Y), not cc(R, Y), ix.
+cc(R, Y) :- c(R, _, Y), ix.
+
+%%% Parent-Child relations
+%% ISA
+% c1949_ROChina isa c1949_Asia
+ir(X, r0) :- in(c1949_ROChina, X), out(c1949_Asia, X), pw.
+ir(X, prod(r0,R)) :- in(c1949_ROChina,X), out3(c1949_Asia, X, R), ix.
+:- #count {X : vrs(X), in(c1949_ROChina,X), in(c1949_Asia,X)} <= 0, pw.
+pie(r0, A, 1) :- ir(X, A), in(c1949_ROChina, X), in(c1949_Asia, X), ix.
+c(r0, A, 1) :- vr(X, A), in(c1949_ROChina, X), in(c1949_Asia, X), ix.
+
+% c1949_ShowaPeriod isa c1949_Asia
+ir(X, r1) :- in(c1949_ShowaPeriod, X), out(c1949_Asia, X), pw.
+ir(X, prod(r1,R)) :- in(c1949_ShowaPeriod,X), out3(c1949_Asia, X, R), ix.
+:- #count {X : vrs(X), in(c1949_ShowaPeriod,X), in(c1949_Asia,X)} <= 0, pw.
+pie(r1, A, 1) :- ir(X, A), in(c1949_ShowaPeriod, X), in(c1949_Asia, X), ix.
+c(r1, A, 1) :- vr(X, A), in(c1949_ShowaPeriod, X), in(c1949_Asia, X), ix.
+
+% c1949_AsiaOther isa c1949_Asia
+ir(X, r2) :- in(c1949_AsiaOther, X), out(c1949_Asia, X), pw.
+ir(X, prod(r2,R)) :- in(c1949_AsiaOther,X), out3(c1949_Asia, X, R), ix.
+:- #count {X : vrs(X), in(c1949_AsiaOther,X), in(c1949_Asia,X)} <= 0, pw.
+pie(r2, A, 1) :- ir(X, A), in(c1949_AsiaOther, X), in(c1949_Asia, X), ix.
+c(r2, A, 1) :- vr(X, A), in(c1949_AsiaOther, X), in(c1949_Asia, X), ix.
+
+%% coverage
+out3(c1949_Asia, X, r3) :- out(c1949_ROChina, X), out(c1949_ShowaPeriod, X), out(c1949_AsiaOther, X), ix.
+out(c1949_Asia, X) :- out(c1949_ROChina, X), out(c1949_ShowaPeriod, X), out(c1949_AsiaOther, X), pw.
+%% sibling disjointness
+% c1949_ROChina ! c1949_ShowaPeriod
+ir(X, r4) :- in(c1949_ROChina, X), in(c1949_ShowaPeriod, X).
+:- #count {X : vrs(X), in(c1949_ROChina,X), out(c1949_ShowaPeriod,X)} <= 0, pw.
+:- #count {X : vrs(X), out(c1949_ROChina,X), in(c1949_ShowaPeriod,X)} <= 0, pw.
+pie(r4, A, 1) :- ir(X, A), in(c1949_ROChina, X), out(c1949_ShowaPeriod, X), ix.
+c(r4, A, 1) :- vr(X, A), in(c1949_ROChina, X), out(c1949_ShowaPeriod, X), ix.
+pie(r4, A, 2) :- ir(X, A), out(c1949_ROChina, X), in(c1949_ShowaPeriod, X), ix.
+c(r4, A, 2) :- vr(X, A), out(c1949_ROChina, X), in(c1949_ShowaPeriod, X), ix.
+
+% c1949_ROChina ! c1949_AsiaOther
+ir(X, r5) :- in(c1949_ROChina, X), in(c1949_AsiaOther, X).
+:- #count {X : vrs(X), in(c1949_ROChina,X), out(c1949_AsiaOther,X)} <= 0, pw.
+:- #count {X : vrs(X), out(c1949_ROChina,X), in(c1949_AsiaOther,X)} <= 0, pw.
+pie(r5, A, 1) :- ir(X, A), in(c1949_ROChina, X), out(c1949_AsiaOther, X), ix.
+c(r5, A, 1) :- vr(X, A), in(c1949_ROChina, X), out(c1949_AsiaOther, X), ix.
+pie(r5, A, 2) :- ir(X, A), out(c1949_ROChina, X), in(c1949_AsiaOther, X), ix.
+c(r5, A, 2) :- vr(X, A), out(c1949_ROChina, X), in(c1949_AsiaOther, X), ix.
+
+% c1949_ShowaPeriod ! c1949_AsiaOther
+ir(X, r6) :- in(c1949_ShowaPeriod, X), in(c1949_AsiaOther, X).
+:- #count {X : vrs(X), in(c1949_ShowaPeriod,X), out(c1949_AsiaOther,X)} <= 0, pw.
+:- #count {X : vrs(X), out(c1949_ShowaPeriod,X), in(c1949_AsiaOther,X)} <= 0, pw.
+pie(r6, A, 1) :- ir(X, A), in(c1949_ShowaPeriod, X), out(c1949_AsiaOther, X), ix.
+c(r6, A, 1) :- vr(X, A), in(c1949_ShowaPeriod, X), out(c1949_AsiaOther, X), ix.
+pie(r6, A, 2) :- ir(X, A), out(c1949_ShowaPeriod, X), in(c1949_AsiaOther, X), ix.
+c(r6, A, 2) :- vr(X, A), out(c1949_ShowaPeriod, X), in(c1949_AsiaOther, X), ix.
+
+%% ISA
+% c1949_MainlandChina isa c1949_PRChina
+ir(X, r7) :- in(c1949_MainlandChina, X), out(c1949_PRChina, X), pw.
+ir(X, prod(r7,R)) :- in(c1949_MainlandChina,X), out3(c1949_PRChina, X, R), ix.
+:- #count {X : vrs(X), in(c1949_MainlandChina,X), in(c1949_PRChina,X)} <= 0, pw.
+pie(r7, A, 1) :- ir(X, A), in(c1949_MainlandChina, X), in(c1949_PRChina, X), ix.
+c(r7, A, 1) :- vr(X, A), in(c1949_MainlandChina, X), in(c1949_PRChina, X), ix.
+
+% c1949_ChinaOther isa c1949_PRChina
+ir(X, r8) :- in(c1949_ChinaOther, X), out(c1949_PRChina, X), pw.
+ir(X, prod(r8,R)) :- in(c1949_ChinaOther,X), out3(c1949_PRChina, X, R), ix.
+:- #count {X : vrs(X), in(c1949_ChinaOther,X), in(c1949_PRChina,X)} <= 0, pw.
+pie(r8, A, 1) :- ir(X, A), in(c1949_ChinaOther, X), in(c1949_PRChina, X), ix.
+c(r8, A, 1) :- vr(X, A), in(c1949_ChinaOther, X), in(c1949_PRChina, X), ix.
+
+%% coverage
+out3(c1949_PRChina, X, r9) :- out(c1949_MainlandChina, X), out(c1949_ChinaOther, X), ix.
+out(c1949_PRChina, X) :- out(c1949_MainlandChina, X), out(c1949_ChinaOther, X), pw.
+%% sibling disjointness
+% c1949_MainlandChina ! c1949_ChinaOther
+ir(X, r10) :- in(c1949_MainlandChina, X), in(c1949_ChinaOther, X).
+:- #count {X : vrs(X), in(c1949_MainlandChina,X), out(c1949_ChinaOther,X)} <= 0, pw.
+:- #count {X : vrs(X), out(c1949_MainlandChina,X), in(c1949_ChinaOther,X)} <= 0, pw.
+pie(r10, A, 1) :- ir(X, A), in(c1949_MainlandChina, X), out(c1949_ChinaOther, X), ix.
+c(r10, A, 1) :- vr(X, A), in(c1949_MainlandChina, X), out(c1949_ChinaOther, X), ix.
+pie(r10, A, 2) :- ir(X, A), out(c1949_MainlandChina, X), in(c1949_ChinaOther, X), ix.
+c(r10, A, 2) :- vr(X, A), out(c1949_MainlandChina, X), in(c1949_ChinaOther, X), ix.
+
+%% ISA
+% c1949_Taiwan isa c1949_ROChina
+ir(X, r11) :- in(c1949_Taiwan, X), out(c1949_ROChina, X), pw.
+ir(X, prod(r11,R)) :- in(c1949_Taiwan,X), out3(c1949_ROChina, X, R), ix.
+:- #count {X : vrs(X), in(c1949_Taiwan,X), in(c1949_ROChina,X)} <= 0, pw.
+pie(r11, A, 1) :- ir(X, A), in(c1949_Taiwan, X), in(c1949_ROChina, X), ix.
+c(r11, A, 1) :- vr(X, A), in(c1949_Taiwan, X), in(c1949_ROChina, X), ix.
+
+% c1949_TaiwanOther isa c1949_ROChina
+ir(X, r12) :- in(c1949_TaiwanOther, X), out(c1949_ROChina, X), pw.
+ir(X, prod(r12,R)) :- in(c1949_TaiwanOther,X), out3(c1949_ROChina, X, R), ix.
+:- #count {X : vrs(X), in(c1949_TaiwanOther,X), in(c1949_ROChina,X)} <= 0, pw.
+pie(r12, A, 1) :- ir(X, A), in(c1949_TaiwanOther, X), in(c1949_ROChina, X), ix.
+c(r12, A, 1) :- vr(X, A), in(c1949_TaiwanOther, X), in(c1949_ROChina, X), ix.
+
+%% coverage
+out3(c1949_ROChina, X, r13) :- out(c1949_Taiwan, X), out(c1949_TaiwanOther, X), ix.
+out(c1949_ROChina, X) :- out(c1949_Taiwan, X), out(c1949_TaiwanOther, X), pw.
+%% sibling disjointness
+% c1949_Taiwan ! c1949_TaiwanOther
+ir(X, r14) :- in(c1949_Taiwan, X), in(c1949_TaiwanOther, X).
+:- #count {X : vrs(X), in(c1949_Taiwan,X), out(c1949_TaiwanOther,X)} <= 0, pw.
+:- #count {X : vrs(X), out(c1949_Taiwan,X), in(c1949_TaiwanOther,X)} <= 0, pw.
+pie(r14, A, 1) :- ir(X, A), in(c1949_Taiwan, X), out(c1949_TaiwanOther, X), ix.
+c(r14, A, 1) :- vr(X, A), in(c1949_Taiwan, X), out(c1949_TaiwanOther, X), ix.
+pie(r14, A, 2) :- ir(X, A), out(c1949_Taiwan, X), in(c1949_TaiwanOther, X), ix.
+c(r14, A, 2) :- vr(X, A), out(c1949_Taiwan, X), in(c1949_TaiwanOther, X), ix.
+
+%% ISA
+% c1949_JapanIslands isa c1949_ShowaPeriod
+ir(X, r15) :- in(c1949_JapanIslands, X), out(c1949_ShowaPeriod, X), pw.
+ir(X, prod(r15,R)) :- in(c1949_JapanIslands,X), out3(c1949_ShowaPeriod, X, R), ix.
+:- #count {X : vrs(X), in(c1949_JapanIslands,X), in(c1949_ShowaPeriod,X)} <= 0, pw.
+pie(r15, A, 1) :- ir(X, A), in(c1949_JapanIslands, X), in(c1949_ShowaPeriod, X), ix.
+c(r15, A, 1) :- vr(X, A), in(c1949_JapanIslands, X), in(c1949_ShowaPeriod, X), ix.
+
+% c1949_JapanOther isa c1949_ShowaPeriod
+ir(X, r16) :- in(c1949_JapanOther, X), out(c1949_ShowaPeriod, X), pw.
+ir(X, prod(r16,R)) :- in(c1949_JapanOther,X), out3(c1949_ShowaPeriod, X, R), ix.
+:- #count {X : vrs(X), in(c1949_JapanOther,X), in(c1949_ShowaPeriod,X)} <= 0, pw.
+pie(r16, A, 1) :- ir(X, A), in(c1949_JapanOther, X), in(c1949_ShowaPeriod, X), ix.
+c(r16, A, 1) :- vr(X, A), in(c1949_JapanOther, X), in(c1949_ShowaPeriod, X), ix.
+
+%% coverage
+out3(c1949_ShowaPeriod, X, r17) :- out(c1949_JapanIslands, X), out(c1949_JapanOther, X), ix.
+out(c1949_ShowaPeriod, X) :- out(c1949_JapanIslands, X), out(c1949_JapanOther, X), pw.
+%% sibling disjointness
+% c1949_JapanIslands ! c1949_JapanOther
+ir(X, r18) :- in(c1949_JapanIslands, X), in(c1949_JapanOther, X).
+:- #count {X : vrs(X), in(c1949_JapanIslands,X), out(c1949_JapanOther,X)} <= 0, pw.
+:- #count {X : vrs(X), out(c1949_JapanIslands,X), in(c1949_JapanOther,X)} <= 0, pw.
+pie(r18, A, 1) :- ir(X, A), in(c1949_JapanIslands, X), out(c1949_JapanOther, X), ix.
+c(r18, A, 1) :- vr(X, A), in(c1949_JapanIslands, X), out(c1949_JapanOther, X), ix.
+pie(r18, A, 2) :- ir(X, A), out(c1949_JapanIslands, X), in(c1949_JapanOther, X), ix.
+c(r18, A, 2) :- vr(X, A), out(c1949_JapanIslands, X), in(c1949_JapanOther, X), ix.
+
+%% ISA
+% c1945_ROChina isa c1945_Asia
+ir(X, r19) :- in(c1945_ROChina, X), out(c1945_Asia, X), pw.
+ir(X, prod(r19,R)) :- in(c1945_ROChina,X), out3(c1945_Asia, X, R), ix.
+:- #count {X : vrs(X), in(c1945_ROChina,X), in(c1945_Asia,X)} <= 0, pw.
+pie(r19, A, 1) :- ir(X, A), in(c1945_ROChina, X), in(c1945_Asia, X), ix.
+c(r19, A, 1) :- vr(X, A), in(c1945_ROChina, X), in(c1945_Asia, X), ix.
+
+% c1945_ShowaPeriod isa c1945_Asia
+ir(X, r20) :- in(c1945_ShowaPeriod, X), out(c1945_Asia, X), pw.
+ir(X, prod(r20,R)) :- in(c1945_ShowaPeriod,X), out3(c1945_Asia, X, R), ix.
+:- #count {X : vrs(X), in(c1945_ShowaPeriod,X), in(c1945_Asia,X)} <= 0, pw.
+pie(r20, A, 1) :- ir(X, A), in(c1945_ShowaPeriod, X), in(c1945_Asia, X), ix.
+c(r20, A, 1) :- vr(X, A), in(c1945_ShowaPeriod, X), in(c1945_Asia, X), ix.
+
+% c1945_AsiaOther isa c1945_Asia
+ir(X, r21) :- in(c1945_AsiaOther, X), out(c1945_Asia, X), pw.
+ir(X, prod(r21,R)) :- in(c1945_AsiaOther,X), out3(c1945_Asia, X, R), ix.
+:- #count {X : vrs(X), in(c1945_AsiaOther,X), in(c1945_Asia,X)} <= 0, pw.
+pie(r21, A, 1) :- ir(X, A), in(c1945_AsiaOther, X), in(c1945_Asia, X), ix.
+c(r21, A, 1) :- vr(X, A), in(c1945_AsiaOther, X), in(c1945_Asia, X), ix.
+
+%% coverage
+out3(c1945_Asia, X, r22) :- out(c1945_ROChina, X), out(c1945_ShowaPeriod, X), out(c1945_AsiaOther, X), ix.
+out(c1945_Asia, X) :- out(c1945_ROChina, X), out(c1945_ShowaPeriod, X), out(c1945_AsiaOther, X), pw.
+%% sibling disjointness
+% c1945_ROChina ! c1945_ShowaPeriod
+ir(X, r23) :- in(c1945_ROChina, X), in(c1945_ShowaPeriod, X).
+:- #count {X : vrs(X), in(c1945_ROChina,X), out(c1945_ShowaPeriod,X)} <= 0, pw.
+:- #count {X : vrs(X), out(c1945_ROChina,X), in(c1945_ShowaPeriod,X)} <= 0, pw.
+pie(r23, A, 1) :- ir(X, A), in(c1945_ROChina, X), out(c1945_ShowaPeriod, X), ix.
+c(r23, A, 1) :- vr(X, A), in(c1945_ROChina, X), out(c1945_ShowaPeriod, X), ix.
+pie(r23, A, 2) :- ir(X, A), out(c1945_ROChina, X), in(c1945_ShowaPeriod, X), ix.
+c(r23, A, 2) :- vr(X, A), out(c1945_ROChina, X), in(c1945_ShowaPeriod, X), ix.
+
+% c1945_ROChina ! c1945_AsiaOther
+ir(X, r24) :- in(c1945_ROChina, X), in(c1945_AsiaOther, X).
+:- #count {X : vrs(X), in(c1945_ROChina,X), out(c1945_AsiaOther,X)} <= 0, pw.
+:- #count {X : vrs(X), out(c1945_ROChina,X), in(c1945_AsiaOther,X)} <= 0, pw.
+pie(r24, A, 1) :- ir(X, A), in(c1945_ROChina, X), out(c1945_AsiaOther, X), ix.
+c(r24, A, 1) :- vr(X, A), in(c1945_ROChina, X), out(c1945_AsiaOther, X), ix.
+pie(r24, A, 2) :- ir(X, A), out(c1945_ROChina, X), in(c1945_AsiaOther, X), ix.
+c(r24, A, 2) :- vr(X, A), out(c1945_ROChina, X), in(c1945_AsiaOther, X), ix.
+
+% c1945_ShowaPeriod ! c1945_AsiaOther
+ir(X, r25) :- in(c1945_ShowaPeriod, X), in(c1945_AsiaOther, X).
+:- #count {X : vrs(X), in(c1945_ShowaPeriod,X), out(c1945_AsiaOther,X)} <= 0, pw.
+:- #count {X : vrs(X), out(c1945_ShowaPeriod,X), in(c1945_AsiaOther,X)} <= 0, pw.
+pie(r25, A, 1) :- ir(X, A), in(c1945_ShowaPeriod, X), out(c1945_AsiaOther, X), ix.
+c(r25, A, 1) :- vr(X, A), in(c1945_ShowaPeriod, X), out(c1945_AsiaOther, X), ix.
+pie(r25, A, 2) :- ir(X, A), out(c1945_ShowaPeriod, X), in(c1945_AsiaOther, X), ix.
+c(r25, A, 2) :- vr(X, A), out(c1945_ShowaPeriod, X), in(c1945_AsiaOther, X), ix.
+
+%% ISA
+% c1945_MainlandChina isa c1945_ROChina
+ir(X, r26) :- in(c1945_MainlandChina, X), out(c1945_ROChina, X), pw.
+ir(X, prod(r26,R)) :- in(c1945_MainlandChina,X), out3(c1945_ROChina, X, R), ix.
+:- #count {X : vrs(X), in(c1945_MainlandChina,X), in(c1945_ROChina,X)} <= 0, pw.
+pie(r26, A, 1) :- ir(X, A), in(c1945_MainlandChina, X), in(c1945_ROChina, X), ix.
+c(r26, A, 1) :- vr(X, A), in(c1945_MainlandChina, X), in(c1945_ROChina, X), ix.
+
+% c1945_ChinaOther isa c1945_ROChina
+ir(X, r27) :- in(c1945_ChinaOther, X), out(c1945_ROChina, X), pw.
+ir(X, prod(r27,R)) :- in(c1945_ChinaOther,X), out3(c1945_ROChina, X, R), ix.
+:- #count {X : vrs(X), in(c1945_ChinaOther,X), in(c1945_ROChina,X)} <= 0, pw.
+pie(r27, A, 1) :- ir(X, A), in(c1945_ChinaOther, X), in(c1945_ROChina, X), ix.
+c(r27, A, 1) :- vr(X, A), in(c1945_ChinaOther, X), in(c1945_ROChina, X), ix.
+
+% c1945_Taiwan isa c1945_ROChina
+ir(X, r28) :- in(c1945_Taiwan, X), out(c1945_ROChina, X), pw.
+ir(X, prod(r28,R)) :- in(c1945_Taiwan,X), out3(c1945_ROChina, X, R), ix.
+:- #count {X : vrs(X), in(c1945_Taiwan,X), in(c1945_ROChina,X)} <= 0, pw.
+pie(r28, A, 1) :- ir(X, A), in(c1945_Taiwan, X), in(c1945_ROChina, X), ix.
+c(r28, A, 1) :- vr(X, A), in(c1945_Taiwan, X), in(c1945_ROChina, X), ix.
+
+% c1945_TaiwanOther isa c1945_ROChina
+ir(X, r29) :- in(c1945_TaiwanOther, X), out(c1945_ROChina, X), pw.
+ir(X, prod(r29,R)) :- in(c1945_TaiwanOther,X), out3(c1945_ROChina, X, R), ix.
+:- #count {X : vrs(X), in(c1945_TaiwanOther,X), in(c1945_ROChina,X)} <= 0, pw.
+pie(r29, A, 1) :- ir(X, A), in(c1945_TaiwanOther, X), in(c1945_ROChina, X), ix.
+c(r29, A, 1) :- vr(X, A), in(c1945_TaiwanOther, X), in(c1945_ROChina, X), ix.
+
+%% coverage
+out3(c1945_ROChina, X, r30) :- out(c1945_MainlandChina, X), out(c1945_ChinaOther, X), out(c1945_Taiwan, X), out(c1945_TaiwanOther, X), ix.
+out(c1945_ROChina, X) :- out(c1945_MainlandChina, X), out(c1945_ChinaOther, X), out(c1945_Taiwan, X), out(c1945_TaiwanOther, X), pw.
+%% sibling disjointness
+% c1945_MainlandChina ! c1945_ChinaOther
+ir(X, r31) :- in(c1945_MainlandChina, X), in(c1945_ChinaOther, X).
+:- #count {X : vrs(X), in(c1945_MainlandChina,X), out(c1945_ChinaOther,X)} <= 0, pw.
+:- #count {X : vrs(X), out(c1945_MainlandChina,X), in(c1945_ChinaOther,X)} <= 0, pw.
+pie(r31, A, 1) :- ir(X, A), in(c1945_MainlandChina, X), out(c1945_ChinaOther, X), ix.
+c(r31, A, 1) :- vr(X, A), in(c1945_MainlandChina, X), out(c1945_ChinaOther, X), ix.
+pie(r31, A, 2) :- ir(X, A), out(c1945_MainlandChina, X), in(c1945_ChinaOther, X), ix.
+c(r31, A, 2) :- vr(X, A), out(c1945_MainlandChina, X), in(c1945_ChinaOther, X), ix.
+
+% c1945_MainlandChina ! c1945_Taiwan
+ir(X, r32) :- in(c1945_MainlandChina, X), in(c1945_Taiwan, X).
+:- #count {X : vrs(X), in(c1945_MainlandChina,X), out(c1945_Taiwan,X)} <= 0, pw.
+:- #count {X : vrs(X), out(c1945_MainlandChina,X), in(c1945_Taiwan,X)} <= 0, pw.
+pie(r32, A, 1) :- ir(X, A), in(c1945_MainlandChina, X), out(c1945_Taiwan, X), ix.
+c(r32, A, 1) :- vr(X, A), in(c1945_MainlandChina, X), out(c1945_Taiwan, X), ix.
+pie(r32, A, 2) :- ir(X, A), out(c1945_MainlandChina, X), in(c1945_Taiwan, X), ix.
+c(r32, A, 2) :- vr(X, A), out(c1945_MainlandChina, X), in(c1945_Taiwan, X), ix.
+
+% c1945_MainlandChina ! c1945_TaiwanOther
+ir(X, r33) :- in(c1945_MainlandChina, X), in(c1945_TaiwanOther, X).
+:- #count {X : vrs(X), in(c1945_MainlandChina,X), out(c1945_TaiwanOther,X)} <= 0, pw.
+:- #count {X : vrs(X), out(c1945_MainlandChina,X), in(c1945_TaiwanOther,X)} <= 0, pw.
+pie(r33, A, 1) :- ir(X, A), in(c1945_MainlandChina, X), out(c1945_TaiwanOther, X), ix.
+c(r33, A, 1) :- vr(X, A), in(c1945_MainlandChina, X), out(c1945_TaiwanOther, X), ix.
+pie(r33, A, 2) :- ir(X, A), out(c1945_MainlandChina, X), in(c1945_TaiwanOther, X), ix.
+c(r33, A, 2) :- vr(X, A), out(c1945_MainlandChina, X), in(c1945_TaiwanOther, X), ix.
+
+% c1945_ChinaOther ! c1945_Taiwan
+ir(X, r34) :- in(c1945_ChinaOther, X), in(c1945_Taiwan, X).
+:- #count {X : vrs(X), in(c1945_ChinaOther,X), out(c1945_Taiwan,X)} <= 0, pw.
+:- #count {X : vrs(X), out(c1945_ChinaOther,X), in(c1945_Taiwan,X)} <= 0, pw.
+pie(r34, A, 1) :- ir(X, A), in(c1945_ChinaOther, X), out(c1945_Taiwan, X), ix.
+c(r34, A, 1) :- vr(X, A), in(c1945_ChinaOther, X), out(c1945_Taiwan, X), ix.
+pie(r34, A, 2) :- ir(X, A), out(c1945_ChinaOther, X), in(c1945_Taiwan, X), ix.
+c(r34, A, 2) :- vr(X, A), out(c1945_ChinaOther, X), in(c1945_Taiwan, X), ix.
+
+% c1945_ChinaOther ! c1945_TaiwanOther
+ir(X, r35) :- in(c1945_ChinaOther, X), in(c1945_TaiwanOther, X).
+:- #count {X : vrs(X), in(c1945_ChinaOther,X), out(c1945_TaiwanOther,X)} <= 0, pw.
+:- #count {X : vrs(X), out(c1945_ChinaOther,X), in(c1945_TaiwanOther,X)} <= 0, pw.
+pie(r35, A, 1) :- ir(X, A), in(c1945_ChinaOther, X), out(c1945_TaiwanOther, X), ix.
+c(r35, A, 1) :- vr(X, A), in(c1945_ChinaOther, X), out(c1945_TaiwanOther, X), ix.
+pie(r35, A, 2) :- ir(X, A), out(c1945_ChinaOther, X), in(c1945_TaiwanOther, X), ix.
+c(r35, A, 2) :- vr(X, A), out(c1945_ChinaOther, X), in(c1945_TaiwanOther, X), ix.
+
+% c1945_Taiwan ! c1945_TaiwanOther
+ir(X, r36) :- in(c1945_Taiwan, X), in(c1945_TaiwanOther, X).
+:- #count {X : vrs(X), in(c1945_Taiwan,X), out(c1945_TaiwanOther,X)} <= 0, pw.
+:- #count {X : vrs(X), out(c1945_Taiwan,X), in(c1945_TaiwanOther,X)} <= 0, pw.
+pie(r36, A, 1) :- ir(X, A), in(c1945_Taiwan, X), out(c1945_TaiwanOther, X), ix.
+c(r36, A, 1) :- vr(X, A), in(c1945_Taiwan, X), out(c1945_TaiwanOther, X), ix.
+pie(r36, A, 2) :- ir(X, A), out(c1945_Taiwan, X), in(c1945_TaiwanOther, X), ix.
+c(r36, A, 2) :- vr(X, A), out(c1945_Taiwan, X), in(c1945_TaiwanOther, X), ix.
+
+%% ISA
+% c1945_JapanIslands isa c1945_ShowaPeriod
+ir(X, r37) :- in(c1945_JapanIslands, X), out(c1945_ShowaPeriod, X), pw.
+ir(X, prod(r37,R)) :- in(c1945_JapanIslands,X), out3(c1945_ShowaPeriod, X, R), ix.
+:- #count {X : vrs(X), in(c1945_JapanIslands,X), in(c1945_ShowaPeriod,X)} <= 0, pw.
+pie(r37, A, 1) :- ir(X, A), in(c1945_JapanIslands, X), in(c1945_ShowaPeriod, X), ix.
+c(r37, A, 1) :- vr(X, A), in(c1945_JapanIslands, X), in(c1945_ShowaPeriod, X), ix.
+
+% c1945_JapanOther isa c1945_ShowaPeriod
+ir(X, r38) :- in(c1945_JapanOther, X), out(c1945_ShowaPeriod, X), pw.
+ir(X, prod(r38,R)) :- in(c1945_JapanOther,X), out3(c1945_ShowaPeriod, X, R), ix.
+:- #count {X : vrs(X), in(c1945_JapanOther,X), in(c1945_ShowaPeriod,X)} <= 0, pw.
+pie(r38, A, 1) :- ir(X, A), in(c1945_JapanOther, X), in(c1945_ShowaPeriod, X), ix.
+c(r38, A, 1) :- vr(X, A), in(c1945_JapanOther, X), in(c1945_ShowaPeriod, X), ix.
+
+%% coverage
+out3(c1945_ShowaPeriod, X, r39) :- out(c1945_JapanIslands, X), out(c1945_JapanOther, X), ix.
+out(c1945_ShowaPeriod, X) :- out(c1945_JapanIslands, X), out(c1945_JapanOther, X), pw.
+%% sibling disjointness
+% c1945_JapanIslands ! c1945_JapanOther
+ir(X, r40) :- in(c1945_JapanIslands, X), in(c1945_JapanOther, X).
+:- #count {X : vrs(X), in(c1945_JapanIslands,X), out(c1945_JapanOther,X)} <= 0, pw.
+:- #count {X : vrs(X), out(c1945_JapanIslands,X), in(c1945_JapanOther,X)} <= 0, pw.
+pie(r40, A, 1) :- ir(X, A), in(c1945_JapanIslands, X), out(c1945_JapanOther, X), ix.
+c(r40, A, 1) :- vr(X, A), in(c1945_JapanIslands, X), out(c1945_JapanOther, X), ix.
+pie(r40, A, 2) :- ir(X, A), out(c1945_JapanIslands, X), in(c1945_JapanOther, X), ix.
+c(r40, A, 2) :- vr(X, A), out(c1945_JapanIslands, X), in(c1945_JapanOther, X), ix.
+
+
+%%% Articulations
+% 1945.AsiaOther equals 1949.AsiaOther
+ir(X, r41) :- out(c1945_AsiaOther,X), in(c1949_AsiaOther,X).
+ir(X, r41) :- in(c1945_AsiaOther,X), out(c1949_AsiaOther,X).
+ir(X, prod(r41,R)) :- out3(c1945_AsiaOther, X, R), in(c1949_AsiaOther,X), ix.
+ir(X, prod(r41,R)) :- in(c1945_AsiaOther,X), out3(c1949_AsiaOther, X, R), ix.
+:- #count {X : vrs(X), in(c1945_AsiaOther,X), in(c1949_AsiaOther,X)} <= 0, pw.
+pie(r41, A, 1) :- ir(X, A), in(c1945_AsiaOther, X), in(c1949_AsiaOther, X), ix.
+c(r41, A, 1) :- vr(X, A), in(c1945_AsiaOther, X), in(c1949_AsiaOther, X), ix.
+
+
+% 1945.Taiwan equals 1949.Taiwan
+ir(X, r42) :- out(c1945_Taiwan,X), in(c1949_Taiwan,X).
+ir(X, r42) :- in(c1945_Taiwan,X), out(c1949_Taiwan,X).
+ir(X, prod(r42,R)) :- out3(c1945_Taiwan, X, R), in(c1949_Taiwan,X), ix.
+ir(X, prod(r42,R)) :- in(c1945_Taiwan,X), out3(c1949_Taiwan, X, R), ix.
+:- #count {X : vrs(X), in(c1945_Taiwan,X), in(c1949_Taiwan,X)} <= 0, pw.
+pie(r42, A, 1) :- ir(X, A), in(c1945_Taiwan, X), in(c1949_Taiwan, X), ix.
+c(r42, A, 1) :- vr(X, A), in(c1945_Taiwan, X), in(c1949_Taiwan, X), ix.
+
+
+% 1945.MainlandChina equals 1949.MainlandChina
+ir(X, r43) :- out(c1945_MainlandChina,X), in(c1949_MainlandChina,X).
+ir(X, r43) :- in(c1945_MainlandChina,X), out(c1949_MainlandChina,X).
+ir(X, prod(r43,R)) :- out3(c1945_MainlandChina, X, R), in(c1949_MainlandChina,X), ix.
+ir(X, prod(r43,R)) :- in(c1945_MainlandChina,X), out3(c1949_MainlandChina, X, R), ix.
+:- #count {X : vrs(X), in(c1945_MainlandChina,X), in(c1949_MainlandChina,X)} <= 0, pw.
+pie(r43, A, 1) :- ir(X, A), in(c1945_MainlandChina, X), in(c1949_MainlandChina, X), ix.
+c(r43, A, 1) :- vr(X, A), in(c1945_MainlandChina, X), in(c1949_MainlandChina, X), ix.
+
+
+% 1945.JapanIslands equals 1949.JapanIslands
+ir(X, r44) :- out(c1945_JapanIslands,X), in(c1949_JapanIslands,X).
+ir(X, r44) :- in(c1945_JapanIslands,X), out(c1949_JapanIslands,X).
+ir(X, prod(r44,R)) :- out3(c1945_JapanIslands, X, R), in(c1949_JapanIslands,X), ix.
+ir(X, prod(r44,R)) :- in(c1945_JapanIslands,X), out3(c1949_JapanIslands, X, R), ix.
+:- #count {X : vrs(X), in(c1945_JapanIslands,X), in(c1949_JapanIslands,X)} <= 0, pw.
+pie(r44, A, 1) :- ir(X, A), in(c1945_JapanIslands, X), in(c1949_JapanIslands, X), ix.
+c(r44, A, 1) :- vr(X, A), in(c1945_JapanIslands, X), in(c1949_JapanIslands, X), ix.
+
+
+% 1945.TaiwanOther equals 1949.TaiwanOther
+ir(X, r45) :- out(c1945_TaiwanOther,X), in(c1949_TaiwanOther,X).
+ir(X, r45) :- in(c1945_TaiwanOther,X), out(c1949_TaiwanOther,X).
+ir(X, prod(r45,R)) :- out3(c1945_TaiwanOther, X, R), in(c1949_TaiwanOther,X), ix.
+ir(X, prod(r45,R)) :- in(c1945_TaiwanOther,X), out3(c1949_TaiwanOther, X, R), ix.
+:- #count {X : vrs(X), in(c1945_TaiwanOther,X), in(c1949_TaiwanOther,X)} <= 0, pw.
+pie(r45, A, 1) :- ir(X, A), in(c1945_TaiwanOther, X), in(c1949_TaiwanOther, X), ix.
+c(r45, A, 1) :- vr(X, A), in(c1945_TaiwanOther, X), in(c1949_TaiwanOther, X), ix.
+
+
+% 1945.ChinaOther equals 1949.ChinaOther
+ir(X, r46) :- out(c1945_ChinaOther,X), in(c1949_ChinaOther,X).
+ir(X, r46) :- in(c1945_ChinaOther,X), out(c1949_ChinaOther,X).
+ir(X, prod(r46,R)) :- out3(c1945_ChinaOther, X, R), in(c1949_ChinaOther,X), ix.
+ir(X, prod(r46,R)) :- in(c1945_ChinaOther,X), out3(c1949_ChinaOther, X, R), ix.
+:- #count {X : vrs(X), in(c1945_ChinaOther,X), in(c1949_ChinaOther,X)} <= 0, pw.
+pie(r46, A, 1) :- ir(X, A), in(c1945_ChinaOther, X), in(c1949_ChinaOther, X), ix.
+c(r46, A, 1) :- vr(X, A), in(c1945_ChinaOther, X), in(c1949_ChinaOther, X), ix.
+
+
+% 1945.JapanOther equals 1949.JapanOther
+ir(X, r47) :- out(c1945_JapanOther,X), in(c1949_JapanOther,X).
+ir(X, r47) :- in(c1945_JapanOther,X), out(c1949_JapanOther,X).
+ir(X, prod(r47,R)) :- out3(c1945_JapanOther, X, R), in(c1949_JapanOther,X), ix.
+ir(X, prod(r47,R)) :- in(c1945_JapanOther,X), out3(c1949_JapanOther, X, R), ix.
+:- #count {X : vrs(X), in(c1945_JapanOther,X), in(c1949_JapanOther,X)} <= 0, pw.
+pie(r47, A, 1) :- ir(X, A), in(c1945_JapanOther, X), in(c1949_JapanOther, X), ix.
+c(r47, A, 1) :- vr(X, A), in(c1945_JapanOther, X), in(c1949_JapanOther, X), ix.
+
+
+%%% Decoding now
+:- rel(X, Y, "="), rel(X, Y, "<"), concept2(X, N1), concept2(Y, N2), pw.
+:- rel(X, Y, "="), rel(X, Y, ">"), concept2(X, N1), concept2(Y, N2), pw.
+:- rel(X, Y, "="), rel(X, Y, "><"), concept2(X, N1), concept2(Y, N2), pw.
+:- rel(X, Y, "="), rel(X, Y, "!"), concept2(X, N1), concept2(Y, N2), pw.
+:- rel(X, Y, "<"), rel(X, Y, ">"), concept2(X, N1), concept2(Y, N2), pw.
+:- rel(X, Y, "<"), rel(X, Y, "><"), concept2(X, N1), concept2(Y, N2), pw.
+:- rel(X, Y, "<"), rel(X, Y, "!"), concept2(X, N1), concept2(Y, N2), pw.
+:- rel(X, Y, ">"), rel(X, Y, "><"), concept2(X, N1), concept2(Y, N2), pw.
+:- rel(X, Y, ">"), rel(X, Y, "!"), concept2(X, N1), concept2(Y, N2), pw.
+:- rel(X, Y, "><"), rel(X, Y, "!"), concept2(X, N1), concept2(Y, N2), pw.
+:- not rel(X, Y, "="), not rel(X, Y, "<"), not rel(X, Y, ">"), not rel(X, Y, "><"), not rel(X, Y, "!"), concept2(X, N1), concept2(Y, N2), N1 < N2, not ncf(X), not ncf(Y), pw.
+
+rel(X, Y, "=") :- not hint(X, Y, 0), hint(X, Y, 1), not hint(X, Y, 2), pw.
+rel(X, Y, "<") :- not hint(X, Y, 0), hint(X, Y, 1), hint(X, Y, 2), pw.
+rel(X, Y, ">") :- hint(X, Y, 0), hint(X, Y, 1), not hint(X, Y, 2), pw.
+rel(X, Y, "><") :- hint(X, Y, 0), hint(X, Y, 1), hint(X, Y, 2), pw.
+rel(X, Y, "!") :- hint(X, Y, 0), not hint(X, Y, 1), hint(X, Y, 2), pw.
+
+
+hint(X, Y, 0) :- concept2(X, N1), concept2(Y, N2), N1 < N2, vrs(R), in(X, R), out(Y, R), not ncf(X), not ncf(Y), pw.
+hint(X, Y, 1) :- concept2(X, N1), concept2(Y, N2), N1 < N2, vrs(R), in(X, R), in(Y, R), not ncf(X), not ncf(Y), pw.
+hint(X, Y, 2) :- concept2(X, N1), concept2(Y, N2), N1 < N2, vrs(R), out(X, R), in(Y, R), not ncf(X), not ncf(Y), pw.
+

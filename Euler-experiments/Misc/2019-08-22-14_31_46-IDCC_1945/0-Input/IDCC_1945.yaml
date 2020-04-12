@@ -1,0 +1,167 @@
+1945.Asia:
+  concept: Asia
+  group: '1945'
+1945.AsiaOther:
+  concept: AsiaOther
+  group: '1945'
+1945.ChinaOther:
+  concept: ChinaOther
+  group: '1945'
+1945.JapanIslands:
+  concept: JapanIslands
+  group: '1945'
+1945.JapanOther:
+  concept: JapanOther
+  group: '1945'
+1945.MainlandChina:
+  concept: MainlandChina
+  group: '1945'
+1945.ROChina:
+  concept: ROChina
+  group: '1945'
+1945.ShowaPeriod:
+  concept: ShowaPeriod
+  group: '1945'
+1945.Taiwan:
+  concept: Taiwan
+  group: '1945'
+1945.TaiwanOther:
+  concept: TaiwanOther
+  group: '1945'
+2018.Asia:
+  concept: Asia
+  group: '2018'
+2018.AsiaOther:
+  concept: AsiaOther
+  group: '2018'
+2018.ChinaOther:
+  concept: ChinaOther
+  group: '2018'
+2018.Japan:
+  concept: Japan
+  group: '2018'
+2018.JapanIslands:
+  concept: JapanIslands
+  group: '2018'
+2018.JapanOther:
+  concept: JapanOther
+  group: '2018'
+2018.MainlandChina:
+  concept: MainlandChina
+  group: '2018'
+2018.PRChina:
+  concept: PRChina
+  group: '2018'
+2018.ROChina:
+  concept: ROChina
+  group: '2018'
+2018.Taiwan:
+  concept: Taiwan
+  group: '2018'
+2018.TaiwanOther:
+  concept: TaiwanOther
+  group: '2018'
+1945.AsiaOther_1945.Asia:
+  label: isa
+  s: 1945.AsiaOther
+  t: 1945.Asia
+1945.ChinaOther_1945.ROChina:
+  label: isa
+  s: 1945.ChinaOther
+  t: 1945.ROChina
+1945.JapanIslands_1945.ShowaPeriod:
+  label: isa
+  s: 1945.JapanIslands
+  t: 1945.ShowaPeriod
+1945.JapanOther_1945.ShowaPeriod:
+  label: isa
+  s: 1945.JapanOther
+  t: 1945.ShowaPeriod
+1945.MainlandChina_1945.ROChina:
+  label: isa
+  s: 1945.MainlandChina
+  t: 1945.ROChina
+1945.ROChina_1945.Asia:
+  label: isa
+  s: 1945.ROChina
+  t: 1945.Asia
+1945.ShowaPeriod_1945.Asia:
+  label: isa
+  s: 1945.ShowaPeriod
+  t: 1945.Asia
+1945.TaiwanOther_1945.ROChina:
+  label: isa
+  s: 1945.TaiwanOther
+  t: 1945.ROChina
+1945.Taiwan_1945.ROChina:
+  label: isa
+  s: 1945.Taiwan
+  t: 1945.ROChina
+2018.AsiaOther_1945.AsiaOther:
+  label: '='
+  s: 2018.AsiaOther
+  t: 1945.AsiaOther
+2018.AsiaOther_2018.Asia:
+  label: isa
+  s: 2018.AsiaOther
+  t: 2018.Asia
+2018.ChinaOther_1945.ChinaOther:
+  label: '='
+  s: 2018.ChinaOther
+  t: 1945.ChinaOther
+2018.ChinaOther_2018.PRChina:
+  label: isa
+  s: 2018.ChinaOther
+  t: 2018.PRChina
+2018.JapanIslands_1945.JapanIslands:
+  label: '='
+  s: 2018.JapanIslands
+  t: 1945.JapanIslands
+2018.JapanIslands_2018.Japan:
+  label: isa
+  s: 2018.JapanIslands
+  t: 2018.Japan
+2018.JapanOther_1945.JapanOther:
+  label: '='
+  s: 2018.JapanOther
+  t: 1945.JapanOther
+2018.JapanOther_2018.Japan:
+  label: isa
+  s: 2018.JapanOther
+  t: 2018.Japan
+2018.Japan_2018.Asia:
+  label: isa
+  s: 2018.Japan
+  t: 2018.Asia
+2018.MainlandChina_1945.MainlandChina:
+  label: '='
+  s: 2018.MainlandChina
+  t: 1945.MainlandChina
+2018.MainlandChina_2018.PRChina:
+  label: isa
+  s: 2018.MainlandChina
+  t: 2018.PRChina
+2018.PRChina_2018.Asia:
+  label: isa
+  s: 2018.PRChina
+  t: 2018.Asia
+2018.ROChina_2018.Asia:
+  label: isa
+  s: 2018.ROChina
+  t: 2018.Asia
+2018.TaiwanOther_1945.TaiwanOther:
+  label: '='
+  s: 2018.TaiwanOther
+  t: 1945.TaiwanOther
+2018.TaiwanOther_2018.ROChina:
+  label: isa
+  s: 2018.TaiwanOther
+  t: 2018.ROChina
+2018.Taiwan_1945.Taiwan:
+  label: '='
+  s: 2018.Taiwan
+  t: 1945.Taiwan
+2018.Taiwan_2018.ROChina:
+  label: isa
+  s: 2018.Taiwan
+  t: 2018.ROChina

@@ -1,0 +1,84 @@
+digraph{
+rankdir=LR
+node[shape=circle style=filled fillcolor="#FFFFFF"] 
+node[shape=note style=filled fillcolor="#FFFFCC" fontname="helvetica"] 
+"1895.AsiaOther"
+"1895.Taiwan"
+"1895.ChinaOther"
+"1895.Asia"
+"1895.TaiwanOther"
+"1895.JapanOther"
+"1895.QingDynasty"
+"1895.JapaneseEmpireMeijiPeriod"
+"1895.MainlandChina"
+"1895.JapanIslands"
+node[shape=circle style=filled fillcolor="#FFFFFF"] 
+node[shape=box style=filled fillcolor="#CCFFCC" fontname="helvetica"] 
+"2018.Japan"
+"2018.ROChina"
+"2018.Asia"
+"2018.TaiwanOther"
+"2018.Taiwan"
+"2018.JapanOther"
+"2018.AsiaOther"
+"2018.PRChina"
+"2018.MainlandChina"
+"2018.JapanIslands"
+"2018.ChinaOther"
+edge[style=solid color="#000000" constraint=true penwidth=1 dir=forward]
+edge[style=solid color="#000000" constraint=true penwidth=1 dir=forward]
+"1895.JapanOther" -> "1895.JapaneseEmpireMeijiPeriod"
+"1895.Taiwan" -> "1895.JapaneseEmpireMeijiPeriod"
+"1895.JapanIslands" -> "1895.JapaneseEmpireMeijiPeriod"
+"1895.AsiaOther" -> "1895.Asia"
+"1895.JapaneseEmpireMeijiPeriod" -> "1895.Asia"
+"1895.ChinaOther" -> "1895.QingDynasty"
+"1895.MainlandChina" -> "1895.QingDynasty"
+"1895.QingDynasty" -> "1895.Asia"
+"1895.TaiwanOther" -> "1895.JapaneseEmpireMeijiPeriod"
+edge[style=solid color="#000000" constraint=true penwidth=1 dir=forward]
+edge[style=solid color="#000000" constraint=true penwidth=1 dir=forward]
+"2018.ROChina" -> "2018.Taiwan" [dir=back]
+"2018.Asia" -> "2018.PRChina" [dir=back]
+"2018.Japan" -> "2018.JapanOther" [dir=back]
+"2018.PRChina" -> "2018.ChinaOther" [dir=back]
+"2018.Asia" -> "2018.AsiaOther" [dir=back]
+"2018.PRChina" -> "2018.MainlandChina" [dir=back]
+"2018.Asia" -> "2018.ROChina" [dir=back]
+"2018.ROChina" -> "2018.TaiwanOther" [dir=back]
+"2018.Asia" -> "2018.Japan" [dir=back]
+"2018.Japan" -> "2018.JapanIslands" [dir=back]
+edge[style=solid color="#000000" constraint=true penwidth=1 dir=forward]
+edge[style=dashed color="#AA00FF" constraint=true penwidth=2 dir=both]
+"2018.JapanIslands" -> "1895.JapanIslands" [label="="]
+"2018.JapanOther" -> "1895.JapanOther" [label="="]
+"2018.TaiwanOther" -> "1895.TaiwanOther" [label="="]
+"2018.MainlandChina" -> "1895.MainlandChina" [label="="]
+"2018.ChinaOther" -> "1895.ChinaOther" [label="="]
+"2018.AsiaOther" -> "1895.AsiaOther" [label="="]
+"2018.Taiwan" -> "1895.Taiwan" [label="="]
+node[shape=box] 
+{rank=source Legend [fillcolor= white margin=0 label=< 
+ <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"> 
+<TR> <TD COLSPAN="2"><font face="Arial Black"> Nodes</font></TD> </TR> 
+<TR> 
+ <TD bgcolor="#FFFFCC" fontname="helvetica">1895</TD> 
+ <TD>10</TD> 
+ </TR> 
+<TR> 
+ <TD bgcolor="#CCFFCC" fontname="helvetica">2018</TD> 
+ <TD>11</TD> 
+ </TR> 
+<TR> <TD COLSPAN="2"><font face = "Arial Black"> Edges </font></TD> </TR> 
+<TR> 
+ <TD><font color ="#000000">is_a (1895)</font></TD><TD>9</TD>
+</TR>
+<TR> 
+ <TD><font color ="#000000">is_a (2018)</font></TD><TD>10</TD>
+</TR>
+<TR> 
+ <TD><font color ="#AA00FF">articulations</font></TD><TD>7</TD>
+</TR>
+</TABLE> 
+ >] } 
+}

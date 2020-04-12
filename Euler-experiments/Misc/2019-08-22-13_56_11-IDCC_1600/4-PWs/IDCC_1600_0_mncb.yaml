@@ -1,0 +1,141 @@
+'*NEW*.1600.Asia \\ 2018.ROChina':
+  concept: 1600.Asia \\ 2018.ROChina
+  group: '*NEW*'
+'*NEW*.1600.Asia \\ 2018.Taiwan':
+  concept: 1600.Asia \\ 2018.Taiwan
+  group: '*NEW*'
+'*NEW*.2018.ROChina \\ 1600.Asia\n2018.Taiwan \\ 1600.Asia\n2018.Taiwan \\ 1600.Formosa':
+  concept: 2018.ROChina \\ 1600.Asia\n2018.Taiwan \\ 1600.Asia\n2018.Taiwan \\ 1600.Formosa
+  group: '*NEW*'
+'*NEW*.2018.Taiwan * 1600.Asia\n2018.Taiwan * 1600.Formosa':
+  concept: 2018.Taiwan * 1600.Asia\n2018.Taiwan * 1600.Formosa
+  group: '*NEW*'
+1600.1600.Formosa\n2018.ROChina * 1600.Asia:
+  concept: 1600.Formosa\n2018.ROChina * 1600.Asia
+  group: '1600'
+1600.Asia:
+  concept: Asia
+  group: '1600'
+1600.DutchTaiwanSouth:
+  concept: DutchTaiwanSouth
+  group: '1600'
+1600.SpanishTaiwanNorth:
+  concept: SpanishTaiwanNorth
+  group: '1600'
+2018.Asia:
+  concept: Asia
+  group: '2018'
+2018.ROChina:
+  concept: ROChina
+  group: '2018'
+2018.Taiwan:
+  concept: Taiwan
+  group: '2018'
+congruent.2018.AsiaOther\n1600.AsiaOther:
+  concept: 2018.AsiaOther\n1600.AsiaOther
+  group: congruent
+congruent.2018.ChinaOther\n1600.ChinaOther:
+  concept: 2018.ChinaOther\n1600.ChinaOther
+  group: congruent
+congruent.2018.JapanIslands\n1600.JapanIslands:
+  concept: 2018.JapanIslands\n1600.JapanIslands
+  group: congruent
+congruent.2018.JapanOther\n1600.JapanOther:
+  concept: 2018.JapanOther\n1600.JapanOther
+  group: congruent
+congruent.2018.Japan\n1600.EdoPeriod:
+  concept: 2018.Japan\n1600.EdoPeriod
+  group: congruent
+congruent.2018.MainlandChina\n1600.MainlandChina:
+  concept: 2018.MainlandChina\n1600.MainlandChina
+  group: congruent
+congruent.2018.PRChina\n1600.MingDynasty:
+  concept: 2018.PRChina\n1600.MingDynasty
+  group: congruent
+congruent.2018.TaiwanOther\n1600.TaiwanOther\n1600.Formosa \\ 2018.Taiwan:
+  concept: 2018.TaiwanOther\n1600.TaiwanOther\n1600.Formosa \\ 2018.Taiwan
+  group: congruent
+1600.Asia \\ 2018.ROChina_1600.Asia \\ 2018.Taiwan:
+  label: is_a (inferred)
+  s: 1600.Asia \\ 2018.ROChina
+  t: 1600.Asia \\ 2018.Taiwan
+1600.Asia \\ 2018.Taiwan_1600.Asia:
+  label: is_a (inferred)
+  s: 1600.Asia \\ 2018.Taiwan
+  t: 1600.Asia
+1600.Asia_2018.Asia:
+  label: is_a (inferred)
+  s: 1600.Asia
+  t: 2018.Asia
+1600.DutchTaiwanSouth_2018.Taiwan * 1600.Asia\n2018.Taiwan * 1600.Formosa:
+  label: is_a (inferred)
+  s: 1600.DutchTaiwanSouth
+  t: 2018.Taiwan * 1600.Asia\n2018.Taiwan * 1600.Formosa
+1600.Formosa\n2018.ROChina * 1600.Asia_1600.Asia:
+  label: is_a (input)
+  s: 1600.Formosa\n2018.ROChina * 1600.Asia
+  t: 1600.Asia
+1600.Formosa\n2018.ROChina * 1600.Asia_2018.ROChina:
+  label: is_a (inferred)
+  s: 1600.Formosa\n2018.ROChina * 1600.Asia
+  t: 2018.ROChina
+1600.SpanishTaiwanNorth_2018.Taiwan * 1600.Asia\n2018.Taiwan * 1600.Formosa:
+  label: is_a (inferred)
+  s: 1600.SpanishTaiwanNorth
+  t: 2018.Taiwan * 1600.Asia\n2018.Taiwan * 1600.Formosa
+2018.AsiaOther\n1600.AsiaOther_1600.Asia \\ 2018.ROChina:
+  label: is_a (inferred)
+  s: 2018.AsiaOther\n1600.AsiaOther
+  t: 1600.Asia \\ 2018.ROChina
+2018.ChinaOther\n1600.ChinaOther_2018.PRChina\n1600.MingDynasty:
+  label: is_a (input)
+  s: 2018.ChinaOther\n1600.ChinaOther
+  t: 2018.PRChina\n1600.MingDynasty
+2018.JapanIslands\n1600.JapanIslands_2018.Japan\n1600.EdoPeriod:
+  label: is_a (input)
+  s: 2018.JapanIslands\n1600.JapanIslands
+  t: 2018.Japan\n1600.EdoPeriod
+2018.JapanOther\n1600.JapanOther_2018.Japan\n1600.EdoPeriod:
+  label: is_a (input)
+  s: 2018.JapanOther\n1600.JapanOther
+  t: 2018.Japan\n1600.EdoPeriod
+2018.Japan\n1600.EdoPeriod_1600.Asia \\ 2018.ROChina:
+  label: is_a (inferred)
+  s: 2018.Japan\n1600.EdoPeriod
+  t: 1600.Asia \\ 2018.ROChina
+2018.MainlandChina\n1600.MainlandChina_2018.PRChina\n1600.MingDynasty:
+  label: is_a (input)
+  s: 2018.MainlandChina\n1600.MainlandChina
+  t: 2018.PRChina\n1600.MingDynasty
+2018.PRChina\n1600.MingDynasty_1600.Asia \\ 2018.ROChina:
+  label: is_a (inferred)
+  s: 2018.PRChina\n1600.MingDynasty
+  t: 1600.Asia \\ 2018.ROChina
+2018.ROChina \\ 1600.Asia\n2018.Taiwan \\ 1600.Asia\n2018.Taiwan \\ 1600.Formosa_2018.Taiwan:
+  label: is_a (inferred)
+  s: 2018.ROChina \\ 1600.Asia\n2018.Taiwan \\ 1600.Asia\n2018.Taiwan \\ 1600.Formosa
+  t: 2018.Taiwan
+2018.ROChina_2018.Asia:
+  label: is_a (input)
+  s: 2018.ROChina
+  t: 2018.Asia
+2018.Taiwan * 1600.Asia\n2018.Taiwan * 1600.Formosa_1600.Formosa\n2018.ROChina * 1600.Asia:
+  label: is_a (inferred)
+  s: 2018.Taiwan * 1600.Asia\n2018.Taiwan * 1600.Formosa
+  t: 1600.Formosa\n2018.ROChina * 1600.Asia
+2018.Taiwan * 1600.Asia\n2018.Taiwan * 1600.Formosa_2018.Taiwan:
+  label: is_a (inferred)
+  s: 2018.Taiwan * 1600.Asia\n2018.Taiwan * 1600.Formosa
+  t: 2018.Taiwan
+2018.TaiwanOther\n1600.TaiwanOther\n1600.Formosa \\ 2018.Taiwan_1600.Asia \\ 2018.Taiwan:
+  label: is_a (inferred)
+  s: 2018.TaiwanOther\n1600.TaiwanOther\n1600.Formosa \\ 2018.Taiwan
+  t: 1600.Asia \\ 2018.Taiwan
+2018.TaiwanOther\n1600.TaiwanOther\n1600.Formosa \\ 2018.Taiwan_1600.Formosa\n2018.ROChina * 1600.Asia:
+  label: is_a (input)
+  s: 2018.TaiwanOther\n1600.TaiwanOther\n1600.Formosa \\ 2018.Taiwan
+  t: 1600.Formosa\n2018.ROChina * 1600.Asia
+2018.Taiwan_2018.ROChina:
+  label: is_a (input)
+  s: 2018.Taiwan
+  t: 2018.ROChina

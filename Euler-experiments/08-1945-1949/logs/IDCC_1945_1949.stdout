@@ -1,0 +1,37 @@
+##### Executing command:
+
+/Users/jessicacheng/EulerX/src-el/euler2 align IDCC_1945_1949.txt -r clingo 
+
+
+##### Euler version:
+
+master
+49e63e6a27be97ab30832180a47d214494388e15
+
+
+##### GraphViz version:
+
+dot - graphviz version 2.36.0 (20140111.2315)
+
+
+##### DLV version:
+
+DLV [build BEN/Dec 17 2012   gcc 4.2.1 (Apple Inc. build 5666) (dot 3)]
+
+usage: dlv {FRONTEND} {OPTIONS} [filename [filename [...]]]
+
+Specify -help for more detailed usage information.
+
+
+##### Running User, Host and Date:
+User:	jessicacheng
+Host:	wirelessprv-10-195-175-58.near.illinois.edu
+Date:	2019-08-22-14:35:40
+
+
+##### Euler Outputs:
+******* You are running example IDCC_1945_1949 *******
+
+Possible world 0:
+{1945.Asia">"1949.PRChina, 1945.ROChina">"1949.PRChina, 1945.Asia">"1949.ROChina, 1945.ROChina">"1949.ROChina, 1945.Asia">"1949.Asia, 1945.Asia">"1949.ShowaPeriod, 1945.Asia">"1949.AsiaOther, 1945.Asia">"1949.ChinaOther, 1945.ROChina">"1949.ChinaOther, 1945.Asia">"1949.MainlandChina, 1945.ROChina">"1949.MainlandChina, 1945.Asia">"1949.JapanOther, 1945.ShowaPeriod">"1949.JapanOther, 1945.Asia">"1949.JapanIslands, 1945.ShowaPeriod">"1949.JapanIslands, 1945.Asia">"1949.TaiwanOther, 1945.ROChina">"1949.TaiwanOther, 1945.Asia">"1949.Taiwan, 1945.ROChina">"1949.Taiwan, 1945.ShowaPeriod"="1949.ShowaPeriod, 1945.AsiaOther"="1949.AsiaOther, 1945.ChinaOther"="1949.ChinaOther, 1945.MainlandChina"="1949.MainlandChina, 1945.JapanOther"="1949.JapanOther, 1945.JapanIslands"="1949.JapanIslands, 1945.TaiwanOther"="1949.TaiwanOther, 1945.Taiwan"="1949.Taiwan, 1945.ChinaOther"<"1949.PRChina, 1945.MainlandChina"<"1949.PRChina, 1945.TaiwanOther"<"1949.ROChina, 1945.Taiwan"<"1949.ROChina, 1945.JapanOther"<"1949.Asia, 1945.ShowaPeriod"<"1949.Asia, 1945.AsiaOther"<"1949.Asia, 1945.JapanIslands"<"1949.Asia, 1945.TaiwanOther"<"1949.Asia, 1945.Taiwan"<"1949.Asia, 1945.JapanOther"<"1949.ShowaPeriod, 1945.JapanIslands"<"1949.ShowaPeriod, 1945.ROChina"><"1949.Asia, 1945.JapanOther"!"1949.PRChina, 1945.ShowaPeriod"!"1949.PRChina, 1945.AsiaOther"!"1949.PRChina, 1945.JapanIslands"!"1949.PRChina, 1945.TaiwanOther"!"1949.PRChina, 1945.Taiwan"!"1949.PRChina, 1945.JapanIslands"!"1949.ROChina, 1945.ShowaPeriod"!"1949.ROChina, 1945.MainlandChina"!"1949.ROChina, 1945.ChinaOther"!"1949.ROChina, 1945.AsiaOther"!"1949.ROChina, 1945.JapanOther"!"1949.ROChina, 1945.ChinaOther"!"1949.Asia, 1945.MainlandChina"!"1949.Asia, 1945.Taiwan"!"1949.ShowaPeriod, 1945.ROChina"!"1949.ShowaPeriod, 1945.TaiwanOther"!"1949.ShowaPeriod, 1945.MainlandChina"!"1949.ShowaPeriod, 1945.ChinaOther"!"1949.ShowaPeriod, 1945.AsiaOther"!"1949.ShowaPeriod, 1945.JapanOther"!"1949.AsiaOther, 1945.ShowaPeriod"!"1949.AsiaOther, 1945.ChinaOther"!"1949.AsiaOther, 1945.ROChina"!"1949.AsiaOther, 1945.MainlandChina"!"1949.AsiaOther, 1945.JapanIslands"!"1949.AsiaOther, 1945.TaiwanOther"!"1949.AsiaOther, 1945.Taiwan"!"1949.AsiaOther, 1945.JapanOther"!"1949.ChinaOther, 1945.ShowaPeriod"!"1949.ChinaOther, 1945.AsiaOther"!"1949.ChinaOther, 1945.MainlandChina"!"1949.ChinaOther, 1945.JapanIslands"!"1949.ChinaOther, 1945.TaiwanOther"!"1949.ChinaOther, 1945.Taiwan"!"1949.ChinaOther, 1945.JapanOther"!"1949.MainlandChina, 1945.ShowaPeriod"!"1949.MainlandChina, 1945.AsiaOther"!"1949.MainlandChina, 1945.ChinaOther"!"1949.MainlandChina, 1945.JapanIslands"!"1949.MainlandChina, 1945.TaiwanOther"!"1949.MainlandChina, 1945.Taiwan"!"1949.MainlandChina, 1945.AsiaOther"!"1949.JapanOther, 1945.ChinaOther"!"1949.JapanOther, 1945.ROChina"!"1949.JapanOther, 1945.MainlandChina"!"1949.JapanOther, 1945.JapanIslands"!"1949.JapanOther, 1945.TaiwanOther"!"1949.JapanOther, 1945.Taiwan"!"1949.JapanOther, 1945.JapanOther"!"1949.JapanIslands, 1945.AsiaOther"!"1949.JapanIslands, 1945.ChinaOther"!"1949.JapanIslands, 1945.ROChina"!"1949.JapanIslands, 1945.MainlandChina"!"1949.JapanIslands, 1945.TaiwanOther"!"1949.JapanIslands, 1945.Taiwan"!"1949.JapanIslands, 1945.JapanOther"!"1949.TaiwanOther, 1945.ShowaPeriod"!"1949.TaiwanOther, 1945.AsiaOther"!"1949.TaiwanOther, 1945.ChinaOther"!"1949.TaiwanOther, 1945.MainlandChina"!"1949.TaiwanOther, 1945.JapanIslands"!"1949.TaiwanOther, 1945.Taiwan"!"1949.TaiwanOther, 1945.JapanOther"!"1949.Taiwan, 1945.ShowaPeriod"!"1949.Taiwan, 1945.AsiaOther"!"1949.Taiwan, 1945.ChinaOther"!"1949.Taiwan, 1945.MainlandChina"!"1949.Taiwan, 1945.JapanIslands"!"1949.Taiwan, 1945.TaiwanOther"!"1949.Taiwan}
+

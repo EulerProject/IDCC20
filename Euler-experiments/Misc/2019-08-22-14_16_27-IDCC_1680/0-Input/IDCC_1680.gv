@@ -1,0 +1,84 @@
+digraph{
+rankdir=LR
+node[shape=circle style=filled fillcolor="#FFFFFF"] 
+node[shape=note style=filled fillcolor="#FFFFCC" fontname="helvetica"] 
+"1680.JapanIslands"
+"1680.EdoPeriod"
+"1680.MainlandChina"
+"1680.TaiwanOther"
+"1680.JapanOther"
+"1680.ChinaOther"
+"1680.Asia"
+"1680.AsiaOther"
+"1680.QingDynasty"
+"1680.Taiwan"
+node[shape=circle style=filled fillcolor="#FFFFFF"] 
+node[shape=box style=filled fillcolor="#CCFFCC" fontname="helvetica"] 
+"2018.Japan"
+"2018.ROChina"
+"2018.AsiaOther"
+"2018.Asia"
+"2018.TaiwanOther"
+"2018.Taiwan"
+"2018.JapanOther"
+"2018.PRChina"
+"2018.MainlandChina"
+"2018.JapanIslands"
+"2018.ChinaOther"
+edge[style=solid color="#000000" constraint=true penwidth=1 dir=forward]
+edge[style=solid color="#000000" constraint=true penwidth=1 dir=forward]
+"1680.EdoPeriod" -> "1680.Asia"
+"1680.ChinaOther" -> "1680.QingDynasty"
+"1680.JapanOther" -> "1680.EdoPeriod"
+"1680.AsiaOther" -> "1680.Asia"
+"1680.Taiwan" -> "1680.QingDynasty"
+"1680.JapanIslands" -> "1680.EdoPeriod"
+"1680.TaiwanOther" -> "1680.QingDynasty"
+"1680.QingDynasty" -> "1680.Asia"
+"1680.MainlandChina" -> "1680.QingDynasty"
+edge[style=solid color="#000000" constraint=true penwidth=1 dir=forward]
+edge[style=solid color="#000000" constraint=true penwidth=1 dir=forward]
+"2018.ROChina" -> "2018.Taiwan" [dir=back]
+"2018.Asia" -> "2018.ROChina" [dir=back]
+"2018.Asia" -> "2018.PRChina" [dir=back]
+"2018.Japan" -> "2018.JapanOther" [dir=back]
+"2018.PRChina" -> "2018.ChinaOther" [dir=back]
+"2018.Asia" -> "2018.Japan" [dir=back]
+"2018.Asia" -> "2018.AsiaOther" [dir=back]
+"2018.PRChina" -> "2018.MainlandChina" [dir=back]
+"2018.ROChina" -> "2018.TaiwanOther" [dir=back]
+"2018.Japan" -> "2018.JapanIslands" [dir=back]
+edge[style=solid color="#000000" constraint=true penwidth=1 dir=forward]
+edge[style=dashed color="#AA00FF" constraint=true penwidth=2 dir=both]
+"2018.Taiwan" -> "1680.Taiwan" [label="="]
+"2018.ChinaOther" -> "1680.ChinaOther" [label="="]
+"2018.JapanIslands" -> "1680.JapanIslands" [label="="]
+"2018.MainlandChina" -> "1680.MainlandChina" [label="="]
+"2018.TaiwanOther" -> "1680.TaiwanOther" [label="="]
+"2018.AsiaOther" -> "1680.AsiaOther" [label="="]
+"2018.JapanOther" -> "1680.JapanOther" [label="="]
+node[shape=box] 
+{rank=source Legend [fillcolor= white margin=0 label=< 
+ <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"> 
+<TR> <TD COLSPAN="2"><font face="Arial Black"> Nodes</font></TD> </TR> 
+<TR> 
+ <TD bgcolor="#FFFFCC" fontname="helvetica">1680</TD> 
+ <TD>10</TD> 
+ </TR> 
+<TR> 
+ <TD bgcolor="#CCFFCC" fontname="helvetica">2018</TD> 
+ <TD>11</TD> 
+ </TR> 
+<TR> <TD COLSPAN="2"><font face = "Arial Black"> Edges </font></TD> </TR> 
+<TR> 
+ <TD><font color ="#000000">is_a (1680)</font></TD><TD>9</TD>
+</TR>
+<TR> 
+ <TD><font color ="#000000">is_a (2018)</font></TD><TD>10</TD>
+</TR>
+<TR> 
+ <TD><font color ="#AA00FF">articulations</font></TD><TD>7</TD>
+</TR>
+</TABLE> 
+ >] } 
+}

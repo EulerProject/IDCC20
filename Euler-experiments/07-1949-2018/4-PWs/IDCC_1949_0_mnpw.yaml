@@ -1,0 +1,80 @@
+1949.Asia:
+  concept: Asia
+  group: '1949'
+2018.Asia:
+  concept: Asia
+  group: '2018'
+congruent.2018.AsiaOther\n1949.AsiaOther:
+  concept: 2018.AsiaOther\n1949.AsiaOther
+  group: congruent
+congruent.2018.ChinaOther\n1949.ChinaOther:
+  concept: 2018.ChinaOther\n1949.ChinaOther
+  group: congruent
+congruent.2018.JapanIslands\n1949.JapanIslands:
+  concept: 2018.JapanIslands\n1949.JapanIslands
+  group: congruent
+congruent.2018.JapanOther\n1949.JapanOther:
+  concept: 2018.JapanOther\n1949.JapanOther
+  group: congruent
+congruent.2018.Japan\n1949.ShowaPeriod:
+  concept: 2018.Japan\n1949.ShowaPeriod
+  group: congruent
+congruent.2018.MainlandChina\n1949.MainlandChina:
+  concept: 2018.MainlandChina\n1949.MainlandChina
+  group: congruent
+congruent.2018.PRChina\n1949.PRChina:
+  concept: 2018.PRChina\n1949.PRChina
+  group: congruent
+congruent.2018.ROChina\n1949.ROChina:
+  concept: 2018.ROChina\n1949.ROChina
+  group: congruent
+congruent.2018.TaiwanOther\n1949.TaiwanOther:
+  concept: 2018.TaiwanOther\n1949.TaiwanOther
+  group: congruent
+congruent.2018.Taiwan\n1949.Taiwan:
+  concept: 2018.Taiwan\n1949.Taiwan
+  group: congruent
+1949.Asia_2018.Asia:
+  label: is_a (inferred)
+  s: 1949.Asia
+  t: 2018.Asia
+2018.AsiaOther\n1949.AsiaOther_1949.Asia:
+  label: is_a (input)
+  s: 2018.AsiaOther\n1949.AsiaOther
+  t: 1949.Asia
+2018.ChinaOther\n1949.ChinaOther_2018.PRChina\n1949.PRChina:
+  label: is_a (input)
+  s: 2018.ChinaOther\n1949.ChinaOther
+  t: 2018.PRChina\n1949.PRChina
+2018.JapanIslands\n1949.JapanIslands_2018.Japan\n1949.ShowaPeriod:
+  label: is_a (input)
+  s: 2018.JapanIslands\n1949.JapanIslands
+  t: 2018.Japan\n1949.ShowaPeriod
+2018.JapanOther\n1949.JapanOther_2018.Japan\n1949.ShowaPeriod:
+  label: is_a (input)
+  s: 2018.JapanOther\n1949.JapanOther
+  t: 2018.Japan\n1949.ShowaPeriod
+2018.Japan\n1949.ShowaPeriod_1949.Asia:
+  label: is_a (input)
+  s: 2018.Japan\n1949.ShowaPeriod
+  t: 1949.Asia
+2018.MainlandChina\n1949.MainlandChina_2018.PRChina\n1949.PRChina:
+  label: is_a (input)
+  s: 2018.MainlandChina\n1949.MainlandChina
+  t: 2018.PRChina\n1949.PRChina
+2018.PRChina\n1949.PRChina_2018.Asia:
+  label: is_a (input)
+  s: 2018.PRChina\n1949.PRChina
+  t: 2018.Asia
+2018.ROChina\n1949.ROChina_1949.Asia:
+  label: is_a (input)
+  s: 2018.ROChina\n1949.ROChina
+  t: 1949.Asia
+2018.TaiwanOther\n1949.TaiwanOther_2018.ROChina\n1949.ROChina:
+  label: is_a (input)
+  s: 2018.TaiwanOther\n1949.TaiwanOther
+  t: 2018.ROChina\n1949.ROChina
+2018.Taiwan\n1949.Taiwan_2018.ROChina\n1949.ROChina:
+  label: is_a (input)
+  s: 2018.Taiwan\n1949.Taiwan
+  t: 2018.ROChina\n1949.ROChina

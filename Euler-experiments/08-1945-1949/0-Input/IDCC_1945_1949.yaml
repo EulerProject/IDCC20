@@ -1,0 +1,163 @@
+1945.Asia:
+  concept: Asia
+  group: '1945'
+1945.AsiaOther:
+  concept: AsiaOther
+  group: '1945'
+1945.ChinaOther:
+  concept: ChinaOther
+  group: '1945'
+1945.JapanIslands:
+  concept: JapanIslands
+  group: '1945'
+1945.JapanOther:
+  concept: JapanOther
+  group: '1945'
+1945.MainlandChina:
+  concept: MainlandChina
+  group: '1945'
+1945.ROChina:
+  concept: ROChina
+  group: '1945'
+1945.ShowaPeriod:
+  concept: ShowaPeriod
+  group: '1945'
+1945.Taiwan:
+  concept: Taiwan
+  group: '1945'
+1945.TaiwanOther:
+  concept: TaiwanOther
+  group: '1945'
+1949.Asia:
+  concept: Asia
+  group: '1949'
+1949.AsiaOther:
+  concept: AsiaOther
+  group: '1949'
+1949.ChinaOther:
+  concept: ChinaOther
+  group: '1949'
+1949.JapanIslands:
+  concept: JapanIslands
+  group: '1949'
+1949.JapanOther:
+  concept: JapanOther
+  group: '1949'
+1949.MainlandChina:
+  concept: MainlandChina
+  group: '1949'
+1949.PRChina:
+  concept: PRChina
+  group: '1949'
+1949.ROChina:
+  concept: ROChina
+  group: '1949'
+1949.ShowaPeriod:
+  concept: ShowaPeriod
+  group: '1949'
+1949.Taiwan:
+  concept: Taiwan
+  group: '1949'
+1949.TaiwanOther:
+  concept: TaiwanOther
+  group: '1949'
+1945.AsiaOther_1945.Asia:
+  label: isa
+  s: 1945.AsiaOther
+  t: 1945.Asia
+1945.AsiaOther_1949.AsiaOther:
+  label: '='
+  s: 1945.AsiaOther
+  t: 1949.AsiaOther
+1945.ChinaOther_1945.ROChina:
+  label: isa
+  s: 1945.ChinaOther
+  t: 1945.ROChina
+1945.ChinaOther_1949.ChinaOther:
+  label: '='
+  s: 1945.ChinaOther
+  t: 1949.ChinaOther
+1945.JapanIslands_1945.ShowaPeriod:
+  label: isa
+  s: 1945.JapanIslands
+  t: 1945.ShowaPeriod
+1945.JapanIslands_1949.JapanIslands:
+  label: '='
+  s: 1945.JapanIslands
+  t: 1949.JapanIslands
+1945.JapanOther_1945.ShowaPeriod:
+  label: isa
+  s: 1945.JapanOther
+  t: 1945.ShowaPeriod
+1945.JapanOther_1949.JapanOther:
+  label: '='
+  s: 1945.JapanOther
+  t: 1949.JapanOther
+1945.MainlandChina_1945.ROChina:
+  label: isa
+  s: 1945.MainlandChina
+  t: 1945.ROChina
+1945.MainlandChina_1949.MainlandChina:
+  label: '='
+  s: 1945.MainlandChina
+  t: 1949.MainlandChina
+1945.ROChina_1945.Asia:
+  label: isa
+  s: 1945.ROChina
+  t: 1945.Asia
+1945.ShowaPeriod_1945.Asia:
+  label: isa
+  s: 1945.ShowaPeriod
+  t: 1945.Asia
+1945.TaiwanOther_1945.ROChina:
+  label: isa
+  s: 1945.TaiwanOther
+  t: 1945.ROChina
+1945.TaiwanOther_1949.TaiwanOther:
+  label: '='
+  s: 1945.TaiwanOther
+  t: 1949.TaiwanOther
+1945.Taiwan_1945.ROChina:
+  label: isa
+  s: 1945.Taiwan
+  t: 1945.ROChina
+1945.Taiwan_1949.Taiwan:
+  label: '='
+  s: 1945.Taiwan
+  t: 1949.Taiwan
+1949.AsiaOther_1949.Asia:
+  label: isa
+  s: 1949.AsiaOther
+  t: 1949.Asia
+1949.ChinaOther_1949.PRChina:
+  label: isa
+  s: 1949.ChinaOther
+  t: 1949.PRChina
+1949.JapanIslands_1949.ShowaPeriod:
+  label: isa
+  s: 1949.JapanIslands
+  t: 1949.ShowaPeriod
+1949.JapanOther_1949.ShowaPeriod:
+  label: isa
+  s: 1949.JapanOther
+  t: 1949.ShowaPeriod
+1949.MainlandChina_1949.PRChina:
+  label: isa
+  s: 1949.MainlandChina
+  t: 1949.PRChina
+1949.ROChina_1949.Asia:
+  label: isa
+  s: 1949.ROChina
+  t: 1949.Asia
+1949.ShowaPeriod_1949.Asia:
+  label: isa
+  s: 1949.ShowaPeriod
+  t: 1949.Asia
+1949.TaiwanOther_1949.ROChina:
+  label: isa
+  s: 1949.TaiwanOther
+  t: 1949.ROChina
+1949.Taiwan_1949.ROChina:
+  label: isa
+  s: 1949.Taiwan
+  t: 1949.ROChina

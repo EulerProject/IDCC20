@@ -1,0 +1,167 @@
+1680.Asia:
+  concept: Asia
+  group: '1680'
+1680.AsiaOther:
+  concept: AsiaOther
+  group: '1680'
+1680.ChinaOther:
+  concept: ChinaOther
+  group: '1680'
+1680.EdoPeriod:
+  concept: EdoPeriod
+  group: '1680'
+1680.JapanIslands:
+  concept: JapanIslands
+  group: '1680'
+1680.JapanOther:
+  concept: JapanOther
+  group: '1680'
+1680.MainlandChina:
+  concept: MainlandChina
+  group: '1680'
+1680.QingDynasty:
+  concept: QingDynasty
+  group: '1680'
+1680.Taiwan:
+  concept: Taiwan
+  group: '1680'
+1680.TaiwanOther:
+  concept: TaiwanOther
+  group: '1680'
+2018.Asia:
+  concept: Asia
+  group: '2018'
+2018.AsiaOther:
+  concept: AsiaOther
+  group: '2018'
+2018.ChinaOther:
+  concept: ChinaOther
+  group: '2018'
+2018.Japan:
+  concept: Japan
+  group: '2018'
+2018.JapanIslands:
+  concept: JapanIslands
+  group: '2018'
+2018.JapanOther:
+  concept: JapanOther
+  group: '2018'
+2018.MainlandChina:
+  concept: MainlandChina
+  group: '2018'
+2018.PRChina:
+  concept: PRChina
+  group: '2018'
+2018.ROChina:
+  concept: ROChina
+  group: '2018'
+2018.Taiwan:
+  concept: Taiwan
+  group: '2018'
+2018.TaiwanOther:
+  concept: TaiwanOther
+  group: '2018'
+1680.AsiaOther_1680.Asia:
+  label: isa
+  s: 1680.AsiaOther
+  t: 1680.Asia
+1680.ChinaOther_1680.QingDynasty:
+  label: isa
+  s: 1680.ChinaOther
+  t: 1680.QingDynasty
+1680.EdoPeriod_1680.Asia:
+  label: isa
+  s: 1680.EdoPeriod
+  t: 1680.Asia
+1680.JapanIslands_1680.EdoPeriod:
+  label: isa
+  s: 1680.JapanIslands
+  t: 1680.EdoPeriod
+1680.JapanOther_1680.EdoPeriod:
+  label: isa
+  s: 1680.JapanOther
+  t: 1680.EdoPeriod
+1680.MainlandChina_1680.QingDynasty:
+  label: isa
+  s: 1680.MainlandChina
+  t: 1680.QingDynasty
+1680.QingDynasty_1680.Asia:
+  label: isa
+  s: 1680.QingDynasty
+  t: 1680.Asia
+1680.TaiwanOther_1680.QingDynasty:
+  label: isa
+  s: 1680.TaiwanOther
+  t: 1680.QingDynasty
+1680.Taiwan_1680.QingDynasty:
+  label: isa
+  s: 1680.Taiwan
+  t: 1680.QingDynasty
+2018.AsiaOther_1680.AsiaOther:
+  label: '='
+  s: 2018.AsiaOther
+  t: 1680.AsiaOther
+2018.AsiaOther_2018.Asia:
+  label: isa
+  s: 2018.AsiaOther
+  t: 2018.Asia
+2018.ChinaOther_1680.ChinaOther:
+  label: '='
+  s: 2018.ChinaOther
+  t: 1680.ChinaOther
+2018.ChinaOther_2018.PRChina:
+  label: isa
+  s: 2018.ChinaOther
+  t: 2018.PRChina
+2018.JapanIslands_1680.JapanIslands:
+  label: '='
+  s: 2018.JapanIslands
+  t: 1680.JapanIslands
+2018.JapanIslands_2018.Japan:
+  label: isa
+  s: 2018.JapanIslands
+  t: 2018.Japan
+2018.JapanOther_1680.JapanOther:
+  label: '='
+  s: 2018.JapanOther
+  t: 1680.JapanOther
+2018.JapanOther_2018.Japan:
+  label: isa
+  s: 2018.JapanOther
+  t: 2018.Japan
+2018.Japan_2018.Asia:
+  label: isa
+  s: 2018.Japan
+  t: 2018.Asia
+2018.MainlandChina_1680.MainlandChina:
+  label: '='
+  s: 2018.MainlandChina
+  t: 1680.MainlandChina
+2018.MainlandChina_2018.PRChina:
+  label: isa
+  s: 2018.MainlandChina
+  t: 2018.PRChina
+2018.PRChina_2018.Asia:
+  label: isa
+  s: 2018.PRChina
+  t: 2018.Asia
+2018.ROChina_2018.Asia:
+  label: isa
+  s: 2018.ROChina
+  t: 2018.Asia
+2018.TaiwanOther_1680.TaiwanOther:
+  label: '='
+  s: 2018.TaiwanOther
+  t: 1680.TaiwanOther
+2018.TaiwanOther_2018.ROChina:
+  label: isa
+  s: 2018.TaiwanOther
+  t: 2018.ROChina
+2018.Taiwan_1680.Taiwan:
+  label: '='
+  s: 2018.Taiwan
+  t: 1680.Taiwan
+2018.Taiwan_2018.ROChina:
+  label: isa
+  s: 2018.Taiwan
+  t: 2018.ROChina

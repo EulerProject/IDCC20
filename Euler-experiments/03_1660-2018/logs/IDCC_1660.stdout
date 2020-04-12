@@ -1,0 +1,37 @@
+##### Executing command:
+
+/Users/jessicacheng/EulerX/src-el/euler2 align IDCC_1660.txt -r clingo 
+
+
+##### Euler version:
+
+master
+49e63e6a27be97ab30832180a47d214494388e15
+
+
+##### GraphViz version:
+
+dot - graphviz version 2.36.0 (20140111.2315)
+
+
+##### DLV version:
+
+DLV [build BEN/Dec 17 2012   gcc 4.2.1 (Apple Inc. build 5666) (dot 3)]
+
+usage: dlv {FRONTEND} {OPTIONS} [filename [filename [...]]]
+
+Specify -help for more detailed usage information.
+
+
+##### Running User, Host and Date:
+User:	jessicacheng
+Host:	wirelessprv-10-195-175-58.near.illinois.edu
+Date:	2019-08-22-14:15:37
+
+
+##### Euler Outputs:
+******* You are running example IDCC_1660 *******
+
+Possible world 0:
+{2018.PRChina"<"1660.Asia, 2018.ROChina"<"1660.Asia, 2018.Japan"<"1660.Asia, 2018.AsiaOther"<"1660.Asia, 2018.ChinaOther"<"1660.QingDynasty, 2018.ChinaOther"<"1660.Asia, 2018.MainlandChina"<"1660.Asia, 2018.MainlandChina"<"1660.QingDynasty, 2018.JapanOther"<"1660.Asia, 2018.JapanOther"<"1660.EdoPeriod, 2018.JapanIslands"<"1660.Asia, 2018.JapanIslands"<"1660.EdoPeriod, 2018.TaiwanOther"<"1660.Asia, 2018.TaiwanOther"<"1660.KingdomOfTungning, 2018.Taiwan"<"1660.Asia, 2018.Taiwan"<"1660.KingdomOfTungning, 2018.PRChina"="1660.QingDynasty, 2018.ROChina"="1660.KingdomOfTungning, 2018.Asia"="1660.Asia, 2018.Japan"="1660.EdoPeriod, 2018.AsiaOther"="1660.AsiaOther, 2018.ChinaOther"="1660.ChinaOther, 2018.MainlandChina"="1660.MainlandChina, 2018.JapanOther"="1660.JapanOther, 2018.JapanIslands"="1660.JapanIslands, 2018.TaiwanOther"="1660.TaiwanOther, 2018.Taiwan"="1660.Formosa, 2018.PRChina">"1660.MainlandChina, 2018.PRChina">"1660.ChinaOther, 2018.ROChina">"1660.TaiwanOther, 2018.ROChina">"1660.Formosa, 2018.Asia">"1660.MainlandChina, 2018.Asia">"1660.QingDynasty, 2018.Asia">"1660.JapanOther, 2018.Asia">"1660.EdoPeriod, 2018.Asia">"1660.TaiwanOther, 2018.Asia">"1660.KingdomOfTungning, 2018.Asia">"1660.AsiaOther, 2018.Asia">"1660.ChinaOther, 2018.Asia">"1660.JapanIslands, 2018.Asia">"1660.Formosa, 2018.Japan">"1660.JapanOther, 2018.Japan">"1660.JapanIslands, 2018.PRChina"!"1660.Formosa, 2018.PRChina"!"1660.KingdomOfTungning, 2018.PRChina"!"1660.JapanIslands, 2018.PRChina"!"1660.EdoPeriod, 2018.PRChina"!"1660.AsiaOther, 2018.PRChina"!"1660.TaiwanOther, 2018.PRChina"!"1660.JapanOther, 2018.ROChina"!"1660.JapanIslands, 2018.ROChina"!"1660.EdoPeriod, 2018.ROChina"!"1660.ChinaOther, 2018.ROChina"!"1660.QingDynasty, 2018.ROChina"!"1660.AsiaOther, 2018.ROChina"!"1660.JapanOther, 2018.ROChina"!"1660.MainlandChina, 2018.Japan"!"1660.Formosa, 2018.Japan"!"1660.KingdomOfTungning, 2018.Japan"!"1660.ChinaOther, 2018.Japan"!"1660.QingDynasty, 2018.Japan"!"1660.AsiaOther, 2018.Japan"!"1660.TaiwanOther, 2018.Japan"!"1660.MainlandChina, 2018.AsiaOther"!"1660.MainlandChina, 2018.AsiaOther"!"1660.QingDynasty, 2018.AsiaOther"!"1660.JapanOther, 2018.AsiaOther"!"1660.EdoPeriod, 2018.AsiaOther"!"1660.TaiwanOther, 2018.AsiaOther"!"1660.KingdomOfTungning, 2018.AsiaOther"!"1660.ChinaOther, 2018.AsiaOther"!"1660.JapanIslands, 2018.AsiaOther"!"1660.Formosa, 2018.ChinaOther"!"1660.MainlandChina, 2018.ChinaOther"!"1660.JapanOther, 2018.ChinaOther"!"1660.EdoPeriod, 2018.ChinaOther"!"1660.TaiwanOther, 2018.ChinaOther"!"1660.KingdomOfTungning, 2018.ChinaOther"!"1660.AsiaOther, 2018.ChinaOther"!"1660.JapanIslands, 2018.ChinaOther"!"1660.Formosa, 2018.MainlandChina"!"1660.JapanOther, 2018.MainlandChina"!"1660.EdoPeriod, 2018.MainlandChina"!"1660.TaiwanOther, 2018.MainlandChina"!"1660.KingdomOfTungning, 2018.MainlandChina"!"1660.AsiaOther, 2018.MainlandChina"!"1660.ChinaOther, 2018.MainlandChina"!"1660.JapanIslands, 2018.MainlandChina"!"1660.Formosa, 2018.JapanOther"!"1660.MainlandChina, 2018.JapanOther"!"1660.QingDynasty, 2018.JapanOther"!"1660.TaiwanOther, 2018.JapanOther"!"1660.KingdomOfTungning, 2018.JapanOther"!"1660.AsiaOther, 2018.JapanOther"!"1660.ChinaOther, 2018.JapanOther"!"1660.JapanIslands, 2018.JapanOther"!"1660.Formosa, 2018.JapanIslands"!"1660.MainlandChina, 2018.JapanIslands"!"1660.QingDynasty, 2018.JapanIslands"!"1660.JapanOther, 2018.JapanIslands"!"1660.TaiwanOther, 2018.JapanIslands"!"1660.KingdomOfTungning, 2018.JapanIslands"!"1660.AsiaOther, 2018.JapanIslands"!"1660.ChinaOther, 2018.JapanIslands"!"1660.Formosa, 2018.TaiwanOther"!"1660.MainlandChina, 2018.TaiwanOther"!"1660.QingDynasty, 2018.TaiwanOther"!"1660.JapanOther, 2018.TaiwanOther"!"1660.EdoPeriod, 2018.TaiwanOther"!"1660.AsiaOther, 2018.TaiwanOther"!"1660.ChinaOther, 2018.TaiwanOther"!"1660.JapanIslands, 2018.TaiwanOther"!"1660.Formosa, 2018.Taiwan"!"1660.MainlandChina, 2018.Taiwan"!"1660.QingDynasty, 2018.Taiwan"!"1660.JapanOther, 2018.Taiwan"!"1660.EdoPeriod, 2018.Taiwan"!"1660.TaiwanOther, 2018.Taiwan"!"1660.AsiaOther, 2018.Taiwan"!"1660.ChinaOther, 2018.Taiwan"!"1660.JapanIslands}
+

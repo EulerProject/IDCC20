@@ -1,0 +1,57 @@
+digraph{
+rankdir=RL
+node[shape=note style=filled fillcolor="#FFFFCC" fontname="helvetica"] 
+"1895.JapaneseEmpireMeijiPeriod"
+node[shape=box style="filled,rounded" fillcolor="#EEEEEE" fontname="helvetica"] 
+"2018.PRChina\n1895.QingDynasty"
+"2018.Taiwan\n1895.Taiwan"
+"2018.Asia\n1895.Asia"
+"2018.TaiwanOther\n1895.TaiwanOther"
+"2018.MainlandChina\n1895.MainlandChina"
+"2018.ChinaOther\n1895.ChinaOther"
+"2018.JapanIslands\n1895.JapanIslands"
+"2018.JapanOther\n1895.JapanOther"
+"2018.AsiaOther\n1895.AsiaOther"
+node[shape=box style=filled fillcolor="#CCFFCC" fontname="helvetica"] 
+"2018.Japan"
+"2018.ROChina"
+edge[arrowhead=normal style=dotted color="#000000" constraint=true penwidth=1]
+edge[arrowhead=normal style=solid color="#000000" constraint=true penwidth=1]
+"2018.JapanIslands\n1895.JapanIslands" -> "2018.Japan"
+"2018.PRChina\n1895.QingDynasty" -> "2018.Asia\n1895.Asia"
+"2018.ChinaOther\n1895.ChinaOther" -> "2018.PRChina\n1895.QingDynasty"
+"2018.AsiaOther\n1895.AsiaOther" -> "2018.Asia\n1895.Asia"
+"2018.TaiwanOther\n1895.TaiwanOther" -> "2018.ROChina"
+"2018.JapanOther\n1895.JapanOther" -> "2018.Japan"
+"2018.MainlandChina\n1895.MainlandChina" -> "2018.PRChina\n1895.QingDynasty"
+"2018.Taiwan\n1895.Taiwan" -> "2018.ROChina"
+"1895.JapaneseEmpireMeijiPeriod" -> "2018.Asia\n1895.Asia"
+edge[arrowhead=normal style=solid color="#FF0000" constraint=true penwidth=1]
+"2018.Japan" -> "1895.JapaneseEmpireMeijiPeriod"
+"2018.ROChina" -> "1895.JapaneseEmpireMeijiPeriod"
+node[shape=box] 
+{rank=source Legend [fillcolor= white margin=0 label=< 
+ <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"> 
+<TR> <TD COLSPAN="2"><font face="Arial Black"> Nodes</font></TD> </TR> 
+<TR> 
+ <TD bgcolor="#FFFFCC" fontname="helvetica">1895</TD> 
+ <TD>1</TD> 
+ </TR> 
+<TR> 
+ <TD bgcolor="#EEEEEE" fontname="helvetica">congruent</TD> 
+ <TD>9</TD> 
+ </TR> 
+<TR> 
+ <TD bgcolor="#CCFFCC" fontname="helvetica">2018</TD> 
+ <TD>2</TD> 
+ </TR> 
+<TR> <TD COLSPAN="2"><font face = "Arial Black"> Edges </font></TD> </TR> 
+<TR> 
+ <TD><font color ="#000000">is_a (input)</font></TD><TD>9</TD>
+</TR>
+<TR> 
+ <TD><font color ="#FF0000">is_a (inferred)</font></TD><TD>2</TD>
+</TR>
+</TABLE> 
+ >] } 
+}

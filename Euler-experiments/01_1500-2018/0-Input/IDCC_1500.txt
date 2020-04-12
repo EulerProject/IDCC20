@@ -1,0 +1,30 @@
+#Taxonomy 1 2018
+#Taxonomy 2 1500
+
+taxonomy 2018 2018T1
+(Asia ROChina PRChina Japan AsiaOther)
+(ROChina Taiwan TaiwanOther)
+(PRChina MainlandChina ChinaOther)
+(Japan JapanIslands JapanOther)
+
+taxonomy 1500 1500T2
+(Asia PortugeseFormosa MingDynasty MuromachiPeriod AsiaOther)
+(PortugeseFormosa Taiwan TaiwanOther)
+(MingDynasty MainlandChina ChinaOther)
+(MuromachiPeriod JapanIslands JapanOther)
+
+articulation 2018-1500 2018T1-1500T2
+#[2018.Asia equals 1500.Asia]
+[2018.AsiaOther equals 1500.AsiaOther]
+[2018.Taiwan equals 1500.Taiwan]
+[2018.MainlandChina equals 1500.MainlandChina]
+[2018.JapanIslands equals 1500.JapanIslands]
+[2018.TaiwanOther equals 1500.TaiwanOther]
+[2018.ChinaOther equals 1500.ChinaOther]
+[2018.JapanOther equals 1500.JapanOther]
+
+
+
+
+
+

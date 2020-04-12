@@ -1,0 +1,174 @@
+1660.Asia:
+  concept: Asia
+  group: '1660'
+1660.AsiaOther:
+  concept: AsiaOther
+  group: '1660'
+1660.ChinaOther:
+  concept: ChinaOther
+  group: '1660'
+1660.EdoPeriod:
+  concept: EdoPeriod
+  group: '1660'
+1660.Formosa:
+  concept: Formosa
+  group: '1660'
+1660.JapanIslands:
+  concept: JapanIslands
+  group: '1660'
+1660.JapanOther:
+  concept: JapanOther
+  group: '1660'
+1660.KingdomOfTungning:
+  concept: KingdomOfTungning
+  group: '1660'
+1660.MainlandChina:
+  concept: MainlandChina
+  group: '1660'
+1660.QingDynasty:
+  concept: QingDynasty
+  group: '1660'
+1660.TaiwanOther:
+  concept: TaiwanOther
+  group: '1660'
+2018.Asia:
+  concept: Asia
+  group: '2018'
+2018.AsiaOther:
+  concept: AsiaOther
+  group: '2018'
+2018.ChinaOther:
+  concept: ChinaOther
+  group: '2018'
+2018.Japan:
+  concept: Japan
+  group: '2018'
+2018.JapanIslands:
+  concept: JapanIslands
+  group: '2018'
+2018.JapanOther:
+  concept: JapanOther
+  group: '2018'
+2018.MainlandChina:
+  concept: MainlandChina
+  group: '2018'
+2018.PRChina:
+  concept: PRChina
+  group: '2018'
+2018.ROChina:
+  concept: ROChina
+  group: '2018'
+2018.Taiwan:
+  concept: Taiwan
+  group: '2018'
+2018.TaiwanOther:
+  concept: TaiwanOther
+  group: '2018'
+1660.AsiaOther_1660.Asia:
+  label: isa
+  s: 1660.AsiaOther
+  t: 1660.Asia
+1660.ChinaOther_1660.QingDynasty:
+  label: isa
+  s: 1660.ChinaOther
+  t: 1660.QingDynasty
+1660.EdoPeriod_1660.Asia:
+  label: isa
+  s: 1660.EdoPeriod
+  t: 1660.Asia
+1660.Formosa_1660.KingdomOfTungning:
+  label: isa
+  s: 1660.Formosa
+  t: 1660.KingdomOfTungning
+1660.JapanIslands_1660.EdoPeriod:
+  label: isa
+  s: 1660.JapanIslands
+  t: 1660.EdoPeriod
+1660.JapanOther_1660.EdoPeriod:
+  label: isa
+  s: 1660.JapanOther
+  t: 1660.EdoPeriod
+1660.KingdomOfTungning_1660.Asia:
+  label: isa
+  s: 1660.KingdomOfTungning
+  t: 1660.Asia
+1660.MainlandChina_1660.QingDynasty:
+  label: isa
+  s: 1660.MainlandChina
+  t: 1660.QingDynasty
+1660.QingDynasty_1660.Asia:
+  label: isa
+  s: 1660.QingDynasty
+  t: 1660.Asia
+1660.TaiwanOther_1660.KingdomOfTungning:
+  label: isa
+  s: 1660.TaiwanOther
+  t: 1660.KingdomOfTungning
+2018.AsiaOther_1660.AsiaOther:
+  label: '='
+  s: 2018.AsiaOther
+  t: 1660.AsiaOther
+2018.AsiaOther_2018.Asia:
+  label: isa
+  s: 2018.AsiaOther
+  t: 2018.Asia
+2018.ChinaOther_1660.ChinaOther:
+  label: '='
+  s: 2018.ChinaOther
+  t: 1660.ChinaOther
+2018.ChinaOther_2018.PRChina:
+  label: isa
+  s: 2018.ChinaOther
+  t: 2018.PRChina
+2018.JapanIslands_1660.JapanIslands:
+  label: '='
+  s: 2018.JapanIslands
+  t: 1660.JapanIslands
+2018.JapanIslands_2018.Japan:
+  label: isa
+  s: 2018.JapanIslands
+  t: 2018.Japan
+2018.JapanOther_1660.JapanOther:
+  label: '='
+  s: 2018.JapanOther
+  t: 1660.JapanOther
+2018.JapanOther_2018.Japan:
+  label: isa
+  s: 2018.JapanOther
+  t: 2018.Japan
+2018.Japan_2018.Asia:
+  label: isa
+  s: 2018.Japan
+  t: 2018.Asia
+2018.MainlandChina_1660.MainlandChina:
+  label: '='
+  s: 2018.MainlandChina
+  t: 1660.MainlandChina
+2018.MainlandChina_2018.PRChina:
+  label: isa
+  s: 2018.MainlandChina
+  t: 2018.PRChina
+2018.PRChina_2018.Asia:
+  label: isa
+  s: 2018.PRChina
+  t: 2018.Asia
+2018.ROChina_2018.Asia:
+  label: isa
+  s: 2018.ROChina
+  t: 2018.Asia
+2018.TaiwanOther_1660.TaiwanOther:
+  label: '='
+  s: 2018.TaiwanOther
+  t: 1660.TaiwanOther
+2018.TaiwanOther_2018.ROChina:
+  label: isa
+  s: 2018.TaiwanOther
+  t: 2018.ROChina
+2018.Taiwan_1660.Formosa:
+  label: '='
+  s: 2018.Taiwan
+  t: 1660.Formosa
+2018.Taiwan_2018.ROChina:
+  label: isa
+  s: 2018.Taiwan
+  t: 2018.ROChina
